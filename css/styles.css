@@ -121,6 +121,7 @@ header > a{
     background-color: #DF7C1F;
     color: black;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
@@ -202,6 +203,7 @@ nav{
     overflow-y: auto;
     max-width: 1200px;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -222,10 +224,12 @@ nav{
     align-content: center;
     align-items: center;
     margin-bottom: 10px;
-    min-height: 250px
+    min-height: 250px;
+    scroll-snap-align: end;
 }
 
 .feat_prod_head{
+    font-size: 1.5rem;
     margin: 0px;
     padding: 0px;
     text-align: center;
@@ -235,6 +239,12 @@ nav{
     max-width: 180px;
     text-align: center;
     margin: 0px 0px 10px 0px;
+}
+
+/*THIS IS FOR THE MISSION STATEMENT */  
+
+.rd_mission{
+    text-align: center;
 }
 
 /* THIS IS FOR THE FOOTER */
