@@ -39,10 +39,6 @@ header > a{
     height: 90%;
 }
 
-nav{
-    width: 100%;
-}
-
 .nav_ul{
     display: flex;
     flex-direction: row;
@@ -70,6 +66,56 @@ nav{
 .empty_space{
     height: 50px;
     width: 100px;
+}
+
+/* THIS IS FOR THE HERO IMAGE AND STORY */ 
+
+.hero_story{
+    background-image: url(../images/hero1.jpeg);
+    min-height: 1000px;
+    margin: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;  /*  I'VE SET THIS TO FLEX SO THAT THE HERO_TXT DIV CAN FLEX-GROW TO FILL THE ENTIRE  CONTAINER. 
+                        THIS, IN TURN WAS DONE TO CREATE A MASK ON TOP OF THE IMAGE, WHICH ENHANCES THE CONTRAST WITHOUT NEED FOR PHOTOSHOPPING.
+                        AND WHILE PHOTOSHOPPING MIGHT BE EASIER, I WANT TO DO AS MUCH AS POSSIBLE IN CSS. THE TASK ISN'T LEARNING PHOTOSHOP, BUT HTML/CSS. */
+}
+
+.hero_mask{
+    flex-grow: 1;
+    background: #00000061;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.hero_txt{
+    position: sticky;
+    top: 200px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.hero_txt > *{
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.hero_txt > h1{
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.cta_btn{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #DF7C1F;
+    color: black;
+    font-weight: bold;
 }
 
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
@@ -112,57 +158,10 @@ nav{
     #menu_icon{
         display: none;
     }
-}
 
-@media screen (max-width 600px) {
-    .nav_ul, header{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* THIS IS FOR THE HERO IMAGE AND STORY */ 
-
-.hero_story{
-    background-image: url(../images/hero1.jpeg);
-    min-height: 800px;
-    margin: 0;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.hero_txt{
-    position: sticky;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: radial-gradient(#0000000e, #00000000);
-    border-radius: 25px;
-    border: none;
-    margin-bottom: 0px;
-}
-
-.hero_txt > *{
-    color: #FFFFFF;
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.hero_txt > h1{
-    font-size: 3rem;
-    margin-bottom: 0px;
-}
-
-.cta_btn{
-    text-decoration: none;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 10px;
-    background-color: #DF7C1F;
-    color: black;
-    font-weight: bold;
+    .hero_mask{
+        background-color: #0000001f;
+    } /* THIS ENSURES THAT THE HERO IMAGE GETS BETTER CONTRAST ON SMALLER SCREENS, WHERE THE TEXT LANDS ON THE SNOW AND NEEDS MORE CONTRAST */
 }
 
 /* THIS IS FOR THE ROW OF FEATURED PRODUCTS */ 
@@ -178,11 +177,11 @@ nav{
 .webshop_row{
     display: flex;
     flex-direction: row;
-    max-height: 380px;
+    max-height: 350px;
     justify-content: center;
     overflow-x: auto;
     max-width: 1200px;
-    scroll-snap-type: x proximity;
+
     margin: auto;
     scroll-behavior: smooth;
     flex-wrap: wrap;
@@ -204,7 +203,7 @@ nav{
     align-content: center;
     align-items: center;
     margin-bottom: 10px;
-    min-height: 300px
+    min-height: 250px
 }
 
 .feat_prod_head{
