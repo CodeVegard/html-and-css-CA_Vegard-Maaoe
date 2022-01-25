@@ -225,7 +225,7 @@ nav{
     align-items: center;
     margin-bottom: 10px;
     min-height: 250px;
-    scroll-snap-align: end;
+    scroll-snap-align: center;
 }
 
 .feat_prod_head{
