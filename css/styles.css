@@ -1,11 +1,22 @@
 /* GLOBAL STYLES */
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+body{
+    margin: 0;
 }
 
-a, p{
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+a, p, li{
     font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+li > a{
+    text-decoration: none;
+    color: black;
 }
 
 /* STYLING THE HEADER */ 
@@ -17,13 +28,26 @@ header{
     background-color: #78AB41;
 }
 
+header > a{
+    display: flex;
+    justify-content: center;   /*MADE THIS FLEX TO CENTER THE LOGO */
+    align-items: center;
+    width: 100px;
+}
+
 .header_logo{
-    height: 100%;
+    height: 90%;
+}
+
+nav{
+    width: 100%;
 }
 
 .nav_ul{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px auto;
 }
 
 .nav_li{
@@ -33,6 +57,19 @@ header{
 
 .nav_li > a{
     font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    transition: ease-in-out 0.3s;
+}
+
+.nav_li > a:hover{
+    color: wheat;
+    font-size: 2.5rem;
+    transition: ease-in-out 0.3s;
+}
+
+.empty_space{
+    height: 50px;
+    width: 100px;
 }
 
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
@@ -77,6 +114,13 @@ nav{
     }
 }
 
+@media screen (max-width 600px) {
+    .nav_ul, header{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /* THIS IS FOR THE HERO IMAGE AND STORY */ 
 
 .hero_story{
@@ -84,14 +128,13 @@ nav{
     min-height: 800px;
     margin: 0;
     background-attachment: fixed;
-    background-position:60%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .hero_txt{
     position: sticky;
-    top: 450px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,4 +142,107 @@ nav{
     border-radius: 25px;
     border: none;
     margin-bottom: 0px;
+}
+
+.hero_txt > *{
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.hero_txt > h1{
+    font-size: 3rem;
+    margin-bottom: 0px;
+}
+
+.cta_btn{
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #DF7C1F;
+    color: black;
+    font-weight: bold;
+}
+
+/* THIS IS FOR THE ROW OF FEATURED PRODUCTS */ 
+
+.featured{
+    min-height: calc(100vh - 500px);
+}
+
+.featured > h2{
+    text-align: center;
+}
+
+.webshop_row{
+    display: flex;
+    flex-direction: row;
+    max-height: 380px;
+    justify-content: center;
+    overflow-x: auto;
+    max-width: 1200px;
+    scroll-snap-type: x proximity;
+    margin: auto;
+    scroll-behavior: smooth;
+    flex-wrap: wrap;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+.webshop_rowpic{
+    max-height: 150px;
+    max-width: auto;
+    margin: 10px 30px;
+}
+
+.picwlink{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    min-height: 300px
+}
+
+.feat_prod_head{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.feat_prod_txt{
+    max-width: 180px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+/* THIS IS FOR THE FOOTER */
+footer{
+    height: 50px;
+    border-top: 2px solid black;
+    padding: 0px;    
+    display: flex;
+    flex-direction: column;
+}
+
+.about{
+    align-self: flex-end;
+    margin: 0px 5% 0px 0px;
+}
+
+.cs_header{
+    margin: 0px;
+}
+
+.cs_ul{
+    padding-left: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+.cs_li{
+    list-style: none;
+    margin: 5px 0px;
 }
