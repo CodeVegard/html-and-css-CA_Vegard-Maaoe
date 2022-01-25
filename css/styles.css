@@ -1,0 +1,99 @@
+/* GLOBAL STYLES */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+
+/* STYLING THE HEADER */ 
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: #78AB41;
+}
+
+.header_logo{
+    height: 100%;
+}
+
+.nav_ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_li{
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.nav_li > a{
+    font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
+
+nav{
+    display: none;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+#hamburger_menu{
+    display: none;
+}
+
+#hamburger_menu:checked ~ nav{
+    display: block;
+    position: relative;
+}
+
+#menu_icon{
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 2.5%;
+    padding: 0rem 1.5rem;
+}
+
+#menu_icon:hover{
+    cursor: pointer;
+    position: absolute;
+}
+
+@media (min-width: 600px) {
+    nav{
+        display: block;
+    }
+
+    #menu_icon{
+        display: none;
+    }
+}
+
+/* THIS IS FOR THE HERO IMAGE AND STORY */ 
+
+.hero_story{
+    background-image: url(images/hero1.jpg);
+    min-height: 800px;
+    margin: 0;
+    background-attachment: fixed;
+    background-position:60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero_txt{
+    position: sticky;
+    top: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(#0000000e, #00000000);
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 0px;
+}
