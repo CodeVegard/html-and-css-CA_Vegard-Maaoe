@@ -167,10 +167,10 @@ nav{
 .webshop_row{
     display: flex;
     flex-direction: row;
-    max-height: 350px;
+    max-height: 375px;
     justify-content: center;
     overflow-y: auto;
-    max-width: 1200px;
+    max-width: 200px;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     margin: auto;
@@ -331,4 +331,7 @@ a > i{
     .mission_box{
         padding-top: 50px;
     } /* THIS WAS DONE TO KEEP THE TEXT JUST ABOVE THE NATURAL LINES  OF THE BG IMAGE OF rd_mission ON MORE SCREEN SIZES */
+    .webshop_row{
+        max-width: 850px;
+    }
 }
