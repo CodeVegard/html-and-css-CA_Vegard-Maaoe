@@ -77,14 +77,15 @@ header > a{
 
 .hero_story{
     background-image: url(../images/hero1.jpeg);
-    min-height: 1000px;
+    min-height: 1080px;
     margin: 0;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;  /*  I'VE SET THIS TO FLEX SO THAT THE HERO_TXT DIV CAN FLEX-GROW TO FILL THE ENTIRE  CONTAINER. 
                         THIS, IN TURN WAS DONE TO CREATE A MASK ON TOP OF THE IMAGE, WHICH ENHANCES THE CONTRAST WITHOUT NEED FOR PHOTOSHOPPING.
-                        AND WHILE PHOTOSHOPPING MIGHT BE EASIER, I WANT TO DO AS MUCH AS POSSIBLE IN CSS. THE TASK ISN'T LEARNING PHOTOSHOP, BUT HTML/CSS. */
+                        AND WHILE PHOTOSHOPPING MIGHT BE EASIER, I WANT TO DO AS MUCH AS POSSIBLE IN CSS. THE TASK ISN'T LEARNING PHOTOSHOP, BUT HTML/CSS. 
+                        AS AN ADDED BONUS, I WAS ABLE TO MAKE A HIGH CONTRAST VERSION FOR MOBILE, WHERE THE TEXT WAS HARD TO SEE DUE TO IT'S PLACEMENT */
 }
 
 .hero_mask{
@@ -155,41 +156,9 @@ nav{
     position: absolute;
 }
 
-@media (min-width: 600px) {
-    nav{
-        display: block;
-    }
-
-    #menu_icon{
-        display: none;
-    }
-
-    .hero_mask{
-        background-color: #0000001f;
-    } /* THIS ENSURES THAT THE HERO IMAGE GETS BETTER CONTRAST ON SMALLER SCREENS, WHERE THE TEXT LANDS ON THE SNOW AND NEEDS MORE CONTRAST */
-
-    .nav_ul{
-        display: flex;
-        flex-direction: row;
-        padding: 0px;
-    }
-    .nav_li{
-        margin: 0px;
-    }
-    .nav_li > a{
-        font-size: 2rem;
-    }
-    .empty_space{
-        height: 50px;
-        width: 100px;
-    }
-}
 
 /* THIS IS FOR THE ROW OF FEATURED PRODUCTS */ 
 
-.featured{
-    min-height: calc(100vh - 500px);
-}
 
 .featured > h2{
     text-align: center;
@@ -244,7 +213,36 @@ nav{
 /*THIS IS FOR THE MISSION STATEMENT */  
 
 .rd_mission{
+    max-width: 650px;
+    margin: auto;
+    background-image: url(../images/gondolas.jpeg);
+    min-height: 700px;
+    background-position-y: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.mission_box{
+    padding-top: 1%;
+    background-color: #0000007d;
+    flex-grow: 1;
+}
+
+
+.mission_header{
     text-align: center;
+    margin: 20px auto 10px auto;
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+.mission_statement{
+    max-width: 350px;
+    margin: 10px auto;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    text-align: center
 }
 
 /* THIS IS FOR THE FOOTER */
@@ -263,6 +261,7 @@ footer{
 
 .cs_header{
     margin: 0px;
+    font-size: 1.5rem;
 }
 
 .cs_ul{
@@ -273,4 +272,39 @@ footer{
 .cs_li{
     list-style: none;
     margin: 5px 0px;
+}
+
+/* MEDIA QUERIES AT THE BOTTOM */
+
+@media (min-width: 600px) {
+    nav{
+        display: block;
+    }
+
+    #menu_icon{
+        display: none;
+    }
+
+    .hero_mask{
+        background-color: #0000001f;
+    } 
+
+    .nav_ul{
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+    }
+    .nav_li{
+        margin: 0px;
+    }
+    .nav_li > a{
+        font-size: 2rem;
+    }
+    .empty_space{
+        height: 50px;
+        width: 100px;
+    }
+    .mission_box{
+        padding-top: 50px;
+    } /* THIS WAS DONE TO KEEP THE TEXT JUST ABOVE THE NATURAL LINES  OF THE BG IMAGE OF rd_mission ON MORE SCREEN SIZES */
 }
