@@ -192,7 +192,7 @@ nav{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     min-height: 250px;
     scroll-snap-align: center;
 }
@@ -259,12 +259,12 @@ footer{
     display: flex;
     flex-direction: row;
     margin-left: 0px;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .some > i{
     font-size: 3rem;
-    margin: 20px;
+    margin: 0px 20px;
     display: inline;
 }
 
@@ -275,7 +275,7 @@ footer{
 
 .cs_header{
     margin: 0px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .cs_ul{
@@ -286,6 +286,10 @@ footer{
 .cs_li{
     list-style: none;
     margin: 5px 0px;
+}
+
+.cs_li > a{
+    font-size: 0.8rem;
 }
 
 /* MEDIA QUERIES AT THE BOTTOM */
