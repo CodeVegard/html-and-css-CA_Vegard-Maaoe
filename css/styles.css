@@ -33,6 +33,7 @@ header > a{
     justify-content: center;   /*MADE THIS FLEX TO CENTER THE LOGO */
     align-items: center;
     padding: 10px;
+    width: 100px;
 }
 
 .header_logo{
