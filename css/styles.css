@@ -32,12 +32,14 @@ header > a{
     display: flex;
     justify-content: center;   /*MADE THIS FLEX TO CENTER THE LOGO */
     align-items: center;
-    width: 100px;
+    padding: 10px;
 }
 
 .header_logo{
-    height: 90%;
+    height: 100%;
 }
+
+
 
 .nav_ul{
     display: flex;
@@ -59,6 +61,7 @@ header > a{
 .nav_li > a{
     font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
+    text-decoration: underline;
     padding: 0px 10px;
     transition: ease-in-out 0.3s;
 }
@@ -118,11 +121,11 @@ header > a{
     text-decoration: none;
     border: 2px solid black;
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
     background-color: #DF7C1F;
     color: black;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin: 10px 10px 20px 10px;
 }
 
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
@@ -167,20 +170,11 @@ nav{
     background-color: white;
     display: flex;
     flex-direction: row;
-    max-height: 375px;
     justify-content: center;
-    overflow-y: auto;
-    max-width: 200px;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     margin: auto;
     flex-wrap: wrap;
 }
 
-::-webkit-scrollbar{
-    width: 0;
-    background: transparent;
-}
 .webshop_rowpic{
     max-height: 150px;
     max-width: auto;
@@ -297,10 +291,24 @@ a > i{
 /* MEDIA QUERIES AT THE BOTTOM */
 
 @media (min-width: 600px) {
-    nav{
-        display: block;
+    header{
+        height: 70px;
     }
 
+    nav{
+        display: flex;
+        align-items: center;
+        margin-right: 112px;
+    }
+    .nav_li > a{
+        text-decoration: none;
+    }
+    #hamburger_menu:checked ~ nav {
+        display: flex;
+        align-items: center;  
+    }    /*     AT FIRST GLANCE, THIS CODE MIGHT SEEM A LITTLE STRANGE. 
+                BUT WITHOUT IT, MY NAV BAR WILL LOOK WONKY IN FULL SCREEN WHILE THE CHECKBOX IS CHECKED. 
+                NOT A LIKELY  SCENARIO, BUT IT CAN HAPPEN IT PROBABLY WILL    */
     #menu_icon{
         display: none;
     }
@@ -323,10 +331,6 @@ a > i{
     }
     .nav_li > a{
         font-size: 2rem;
-    }
-    .empty_space{
-        height: 50px;
-        width: 100px;
     }
     .mission_box{
         padding-top: 50px;
