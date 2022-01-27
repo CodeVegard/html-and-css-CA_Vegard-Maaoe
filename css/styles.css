@@ -33,7 +33,7 @@ header > a{
     justify-content: center;   /*MADE THIS FLEX TO CENTER THE LOGO */
     align-items: center;
     padding: 10px;
-    width: 100px;
+    width: 100px; /* THIS DID NOT SEEM TO GET THROUGH TO NETLIFY, ADDING TEXT TO PUSH THE CHANGE AGAIN. THE WIDTH IS NESSECARY FOR THE SITE TO WORK ON FIREFOX */
 }
 
 .header_logo{
