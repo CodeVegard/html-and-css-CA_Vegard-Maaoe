@@ -32,15 +32,13 @@ header > a{
     display: flex;
     justify-content: center;   /*MADE THIS FLEX TO CENTER THE LOGO */
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     width: 100px; /* THIS DID NOT SEEM TO GET THROUGH TO NETLIFY, ADDING TEXT TO PUSH THE CHANGE AGAIN. THE WIDTH IS NESSECARY FOR THE SITE TO WORK ON FIREFOX */
 }
 
 .header_logo{
     height: 100%;
 }
-
-
 
 .nav_ul{
     display: flex;
@@ -72,11 +70,6 @@ header > a{
     transition: ease-in-out 0.3s;
 }
 
-.empty_space{
-    height: 0px;
-    width: 0px;
-}
-
 /* THIS IS FOR THE HERO IMAGE AND STORY */ 
 
 .hero_story{
@@ -96,7 +89,6 @@ header > a{
     flex-grow: 1;
     background: #00000061;
     border: none;
-    margin-bottom: 0px;
 }
 
 .hero_txt{
