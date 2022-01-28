@@ -80,7 +80,7 @@ header > a{
 /* THIS IS FOR THE HERO IMAGE AND STORY */ 
 
 .hero_story{
-    background-image: url(../images/hero1.jpeg);
+    background-image: url(../images/hero_lower_res.jpg);
     min-height: 850px; /* GOING WITH 850px FOR MOBILE, 1080 FOR DESKTOP */
     margin: 0;
     background-attachment: fixed;
@@ -97,6 +97,7 @@ header > a{
     background: #00000061;
     border: none;
     margin-bottom: 0px;
+    max-height: 100%;
 }
 
 .hero_txt{
@@ -209,7 +210,7 @@ nav{
 .rd_mission{
     max-width: 650px;
     margin: auto;
-    background-image: url(../images/gondolas.jpeg);
+    background-image: url(../images/gondolas_lower_res.jpg);
     min-height: 850px;
     background-position-y: 80%;
     background-repeat: no-repeat;
