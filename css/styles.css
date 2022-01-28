@@ -287,6 +287,10 @@ a > i{
         height: 70px;
     }
 
+    header > a{
+        padding: 10px;
+    }
+
     nav{
         display: flex;
         align-items: center;
