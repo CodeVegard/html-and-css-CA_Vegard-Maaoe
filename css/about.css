@@ -1,0 +1,14 @@
+.about_main{
+    margin: 10px;
+    max-width: 750px;
+}
+
+.about_main > h1{
+    margin-bottom: 0px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: ;
+}
