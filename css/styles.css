@@ -1,3 +1,5 @@
+@import url("imports/variables.css");
+
 /* GLOBAL STYLES */
 
 body{
@@ -5,14 +7,16 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: var(--header-fonts);
     font-size: 2rem;
 }
 
+
 a, p, li{
-    font-family: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: var(--regular-fonts);
     font-size: 1rem;
 }
+
 
 li > a{
     text-decoration: none;
@@ -25,7 +29,7 @@ header{
     display: flex;
     flex-direction: row;
     height: 50px;
-    background-color: #78AB41;
+    background-color: var(--primary-color);
 }
 
 header > a{
@@ -79,7 +83,9 @@ header > a{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;  /*  I'VE SET THIS TO FLEX SO THAT THE HERO_MASK DIV CAN FLEX-GROW TO FILL THE ENTIRE  CONTAINER. 
+    background-position-x: right;
+    display: flex;  /*  I'VE SET THIS TO FLEX SO THAT THE HERO_MASK DIV CAN FLEX-GROW TO FILL 
+                        THE ENTIRE  CONTAINER. 
                         THIS, IN TURN WAS DONE TO CREATE A MASK ON TOP OF THE IMAGE, WHICH ENHANCES THE CONTRAST WITHOUT NEED FOR PHOTOSHOPPING.
                         AND WHILE PHOTOSHOPPING MIGHT BE EASIER, I WANT TO DO AS MUCH AS POSSIBLE IN CSS. THE TASK ISN'T LEARNING PHOTOSHOP, BUT HTML/CSS. 
                         AS AN ADDED BONUS, I WAS ABLE TO MAKE A HIGH CONTRAST VERSION FOR MOBILE, WHERE THE TEXT WAS HARD TO SEE DUE TO IT'S PLACEMENT */
