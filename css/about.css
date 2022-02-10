@@ -31,18 +31,19 @@ h1, h2{
 }
 
 li{
-    margin: 5px;
+    margin: 10px 0px;
 }
 
-li > li{
-    margin-bottom: 15px;
+.tel{
+    text-decoration: underline;
+    color: #0000EE;
 }
 
 .chatwus{
     padding: 5px;
     margin: 5px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .openhours{
@@ -57,4 +58,5 @@ li > li{
 
 .map{
     max-width: 100%;
+    width: 750px;
 }
