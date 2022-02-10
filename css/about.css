@@ -32,6 +32,7 @@ h1, h2{
 
 li{
     margin: 10px 0px;
+    list-style: none;
 }
 
 .tel{
