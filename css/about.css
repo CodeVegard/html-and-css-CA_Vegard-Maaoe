@@ -1,14 +1,60 @@
+main{
+    max-width: 750px;
+    margin: auto;
+}
+
 .about_main{
     margin: 10px;
     max-width: 750px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.about_main > h1{
+.story{
+    max-width: 400px;
+    margin: 0px 20px 0px 0px;
+}
+
+h1, h2{
+    margin: 10px 0px;
+}
+
+.contact_info{
+    max-width: 250px;
+    margin: 0px 20px 0px 0px;
+}
+
+.contact_ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+li{
+    margin: 5px;
+}
+
+li > li{
+    margin-bottom: 15px;
+}
+
+.chatwus{
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.openhours{
     margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: ;
+.onthemap{
+    margin: 20px 10px 10px 10px;
+    max-width: 750px;
+}
+
+.map{
+    max-width: 100%;
 }
