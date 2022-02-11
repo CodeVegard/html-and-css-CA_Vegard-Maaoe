@@ -313,7 +313,7 @@ a > i{
     }
 
     .hero_story{
-        min-height: 1080px;
+        max-height: 1080px;
     }
 
     .hero_mask{
