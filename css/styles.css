@@ -118,7 +118,7 @@ header > a{
     border: 2px solid black;
     border-radius: 15px;
     padding: 15px;
-    background-color: #DF7C1F;
+    background-color: var(--cta-bg-color);
     color: black;
     font-weight: bold;
     margin: 10px 10px 20px 10px;
