@@ -75,8 +75,8 @@ min-height: calc(100vh - 200px);
     border: 2px solid black;
     border-radius: 10px;
     text-decoration: none;
+    width: 100%;
     color: black;
-    background-color: rgba(21, 219, 104, 0.733);
 }
 
 .chart{
@@ -87,9 +87,12 @@ min-height: calc(100vh - 200px);
     border: 2px solid black;
     border-radius: 10px;
     text-decoration: none;
-    color: black;
-    background-color: var(--cta-bg-color);
+    color: white;
+    width: 100%;
+    background-color: black;
 }
+
+/* The contrast on the buy buttons was awful, bordering on useless for colorblind people (green + orange). Went with black and white buttons with inspiration from nomaden.no */
 
 input[type=submit]{
     font-family: 'open sans', 'roboto', sans-serif;
