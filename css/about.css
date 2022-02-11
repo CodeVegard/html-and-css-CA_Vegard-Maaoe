@@ -3,9 +3,12 @@ main{
     margin: auto;
 }
 
+h1, h2{
+    margin: 10px 0px;
+}
+
 .about_main{
     margin: 10px;
-    max-width: 750px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,10 +17,6 @@ main{
 .story{
     max-width: 400px;
     margin: 0px 20px 0px 0px;
-}
-
-h1, h2{
-    margin: 10px 0px;
 }
 
 .contact_info{
