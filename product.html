@@ -19,7 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product.css" />
     <title>Rainydays - The Jacket</title>
   </head>
   <body>
@@ -43,75 +43,77 @@
       </nav>
     </header>
     <main class="product_page">
-        <article class="product_presentation">
-          <section class="product_imgs">
+      <div class="product_presentation">
+        <div class="product_imgs">
+          <img
+            class="big_img"
+            src="images/edvin_original.jpg"
+            alt="fashion_pic"
+            title="The Jacket, big image"
+          />
+          <!--Remember to change the picture above for a lower res one-->
+          <div class="tiny_pics">
             <img
-              class="big_img"
-              src="images/edvin_original.jpg"
+              class="small_img"
+              src="images/edvin_cropped.jpg"
               alt="fashion_pic"
-              title="fashion picture"
+              title="The Jacket, small image"
             />
-            <div class="tiny_pics">
-              <img
-                class="small_img"
-                src="images/edvin_cropped.jpg"
-                alt="fashion_pic"
-                title="fashion picture"
-              />
-              <img
-                class="small_img"
-                src="images/edvin_cropped.jpg"
-                alt="fashion_pic"
-                title="fashion picture"
-              />
-              <img
-                class="small_img"
-                src="images/edvin_cropped.jpg"
-                alt="fashion_pic"
-                title="fashion picture"
-              />
-              <img
-                class="small_img"
-                src="images/edvin_cropped.jpg"
-                alt="fashion_pic"
-                title="fashion picture"
-              />
-              <img
-                class="small_img"
-                src="images/edvin_cropped.jpg"
-                alt="fashion_pic"
-                title="fashion picture"
-              />
-            </div>
-          </section>
-  
-          <section class="prod_text">
-            <h2 class="product_name">This is The Jacket</h2>
-  
-            <p class="product_description">
-              This is The Jacket, it's cool and funky. I prefer to only use
-              2-3 sentences of copy. This is the final sentence of the copy.
-            </p>
-  
-            <p class="price">999 kr</p>
-  
-            <form class="buybox">
-              <input type="submit" class="buy" name="buy" value="Buy Now" />
-              <input
-                type="submit"
-                class="chart"
-                name="chart"
-                value="Add to Chart"
-              />
-            </form>
-          </section>
-        </article>
+            <img
+              class="small_img"
+              src="images/edvin_cropped.jpg"
+              alt="fashion_pic"
+              title="The Jacket, small image"
+            />
+            <img
+              class="small_img"
+              src="images/edvin_cropped.jpg"
+              alt="fashion_pic"
+              title="The Jacket, small image"
+            />
+            <img
+              class="small_img"
+              src="images/edvin_cropped.jpg"
+              alt="fashion_pic"
+              title="The Jacket, small image"
+            />
+            <img
+              class="small_img"
+              src="images/edvin_cropped.jpg"
+              alt="fashion_pic"
+              title="The Jacket, small image"
+            />
+          </div>
+        </div>
+
+        <section class="prod_text">
+          <h2 class="product_name">This is The Jacket</h2>
+
+          <p class="product_description">
+            This is The Jacket, it's cool and funky. I prefer to only use 2-3
+            sentences of copy. This is the final sentence of the copy.
+          </p>
+
+          <p class="price">999 kr</p>
+
+          <form class="buybox">
+            <input type="submit" class="buy" name="buy" value="Buy Now" />
+            <input
+              type="submit"
+              class="chart"
+              name="chart"
+              value="Add to Chart"
+            />
+          </form>
+        </section>
+      </div>
+    </main>
     <footer>
       <div class="some">
         <a class="some_icon" href="" title="facebook">
           <i class="fab fa-facebook-square"></i>
         </a>
-        <a class="some_icon" href="" tabindex="instagram">
+        <a class="some_icon" href="" title="instagram">
           <i class="fab fa-instagram-square"></i>
         </a>
         <a class="some_icon" href="" title="twitter">
