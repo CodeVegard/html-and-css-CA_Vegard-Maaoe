@@ -1,0 +1,9 @@
+The required pages are:
+
+Home
+List of Jackets
+A jacket specific page showing the jacket
+A checkout page
+A checkout success
+About
+Contact
