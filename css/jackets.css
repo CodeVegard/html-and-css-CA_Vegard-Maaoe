@@ -1,0 +1,91 @@
+@import url("imports/variables.css");
+
+.gobygenre{
+    width: 750px;
+    margin: auto;
+}
+
+.article_header{
+    text-align: center;
+}
+
+.types_of_clothes{
+    max-height: 800px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: stretch;
+    margin-top: 0px;
+}
+
+.genrebox{
+    padding: 25px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.genre{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#gear{
+    background-image: url(../images/sindre_cropped.jpg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+#shoes{
+    background-image: url(../images/waterproof.jpg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+#womens{
+    background-image: url(../images/couple_cropped.jpg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+#mens{
+    background-image: url(../images/edvin_cropped.jpg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.genreheader{
+    font-size: 2rem;
+    font-family: var(--header-fonts);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #0000000f;
+}
+.genretxt{
+    font-size: 1rem;
+    font-family: var(--regular-fonts)
+}
