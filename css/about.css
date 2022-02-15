@@ -1,8 +1,3 @@
-main{
-    max-width: 750px;
-    margin: auto;
-}
-
 h1, h2{
     margin: 10px 0px;
 }
@@ -12,6 +7,20 @@ h1, h2{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.rd_mission{
+    background-image: url(../images/rocking_mountains.jpeg);
+    max-width: none;
+    background-position-x: 60%;
+}
+
+.mission_box{
+    background-color: #000000ad;
+}
+
+.mission_header{
+    font-size: 2rem;
 }
 
 .story{
@@ -59,4 +68,16 @@ li{
 .map{
     max-width: 100%;
     width: 750px;
+}
+
+@media (min-width:600px) {
+    .rd_mission{
+        background-position-y: 25%;
+    }
+    .mission_box{
+        background-color: #0000007d;
+    }
+    .mission_header{
+        font-size: 3rem;
+    }
 }
