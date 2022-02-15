@@ -1,0 +1,56 @@
+main{
+    max-width: 750px;
+    margin: auto;
+}
+
+.contact_info{
+    width: 250px;
+    margin: auto;
+}
+
+.contact_info > h1{
+    text-align: center;
+}
+
+.contact_ul{
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    margin: 10px;
+    list-style: none;
+}
+
+.tel{
+    text-decoration: underline;
+    color: #0000EE;
+}
+
+.chatwus{
+    padding: 5px;
+    margin: 10 5px 5px 5px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.openhours{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.onthemap{
+    margin: 20px 10px 10px 10px;
+    max-width: 750px;
+}
+
+.onthemap > h2{
+    text-align: center;
+}
+
+.map{
+    max-width: 100%;
+    width: 750px;
+}

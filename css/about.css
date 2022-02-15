@@ -23,53 +23,6 @@ h1, h2{
     font-size: 2rem;
 }
 
-.story{
-    max-width: 400px;
-    margin: 0px 20px 0px 0px;
-}
-
-.contact_info{
-    max-width: 250px;
-    margin: 0px 20px 0px 0px;
-}
-
-.contact_ul{
-    list-style: none;
-    padding-left: 0px;
-}
-
-li{
-    margin: 10px 0px;
-    list-style: none;
-}
-
-.tel{
-    text-decoration: underline;
-    color: #0000EE;
-}
-
-.chatwus{
-    padding: 5px;
-    margin: 5px;
-    border: 2px solid black;
-    border-radius: 15px;
-}
-
-.openhours{
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-.onthemap{
-    margin: 20px 10px 10px 10px;
-    max-width: 750px;
-}
-
-.map{
-    max-width: 100%;
-    width: 750px;
-}
-
 @media (min-width:600px) {
     .rd_mission{
         background-position-y: 25%;
