@@ -1,9 +1,9 @@
 The required pages are:
 
-Home
-List of Jackets
-A jacket specific page showing the jacket
-A checkout page
+Home  - DONE
+List of Jackets - IN PROGRESS
+A jacket specific page showing the jacket - IN PROGRESS
+A checkout page -
 A checkout success
-About
-Contact
+About - IN PROGRESS 
+Contact	- IN PROGRESS
