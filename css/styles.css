@@ -183,7 +183,6 @@ nav{
     align-items: center;
     padding-bottom: 10px;
     min-height: 250px;
-    scroll-snap-align: center;
 }
 
 .feat_prod_head{

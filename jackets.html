@@ -1,104 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="These are our jackets"
-    />
-    <script
-      src="https://kit.fontawesome.com/efafec28fb.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/jackets.css">
-    <title>Rainydays - Our Jackets</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo.png"
-          class="header_logo"
-          alt="RainyDays Logo"
-      /></a>
-      <label for="hamburger_menu" class="menubox"
-        ><i class="fas fa-bars" id="menu_icon"></i
-      ></label>
-      <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
-      <nav class="navigation">
-        <ul class="nav_ul">
-          <li class="nav_li"><a href="">MEN</a></li>
-          <li class="nav_li"><a href="">WOMEN</a></li>
-          <li class="nav_li"><a href="">GEAR</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-        <section class="gobygenre">
-            <h1 class="article_header">Browse by Category:</h1>
-        <div class="types_of_clothes">
-          <div class="genrebox" id="inspo">
-            <a href="product.html" class="genreheader"
-              >Gear
-              <span class="genretxt">Browse all sweathers</span>
-            </a>
-          </div>
-          <div class="genrebox" id="shoes">
-            <a href="product.html" class="genreheader"
-              >Shoes
-              <span class="genretxt">Browse all shoes</span>
-            </a>
-          </div>
-          <div class="genrebox" id="womens">
-            <a href="product.html" class="genreheader"
-              >Womens
-              <span class="genretxt">Browse the womens collection</span>
-            </a>
-          </div>
-          <div class="genrebox" id="mens">
-            <a href="product.html" class="genreheader"
-              >Mens
-              <span class="genretxt">Browse the mens collection</span>
-            </a>
-          </div>
-        </div>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="These are our jackets" />
+  <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jackets.css">
+  <title>Rainydays - Our Jackets</title>
+</head>
 
-        <section class="listofjackets">
+<body>
+  <header>
+    <a href="index.html"><img src="images/RainyDays_Logo.png" class="header_logo" alt="RainyDays Logo" /></a>
+    <label for="hamburger_menu" class="menubox"><i class="fas fa-bars" id="menu_icon"></i></label>
+    <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
+    <nav class="navigation">
+      <ul class="nav_ul">
+        <li class="nav_li"><a href="">MEN</a></li>
+        <li class="nav_li"><a href="">WOMEN</a></li>
+        <li class="nav_li"><a href="">GEAR</a></li>
+      </ul>
+    </nav>
+  </header>
 
-
-        </section>
-    </main>
-
-    <footer>
-        <div class="some">
-          <a class="some_icon" href="https://www.facebook.com/" title="facebook">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a class="some_icon" href="https://www.instagram.com/" title="instagram">
-            <i class="fab fa-instagram-square"></i>
-          </a>
-          <a class="some_icon" href="https://twitter.com/" title="twitter">
-            <i class="fab fa-twitter-square"></i>
+  <main>
+    <section class="gobygenre">
+      <h1 class="article_header">Browse by Category:</h1>
+      <div class="types_of_clothes">
+        <div class="genrebox" id="womens">
+          <a href="#womensjackets" class="genreheader">Womens
+            <span class="genretxt">Browse the womens collection</span>
           </a>
         </div>
-        <div class="about">
-          <h2 class="cs_header">About us</h2>
-          <ul class="cs_ul">
-            <li class="cs_li"><a href="about.html">Our Story</a></li>
-            <li class="cs_li"><a href="contact.html">Contact us</a></li>
-          </ul>
+        <div class="genrebox" id="mens">
+          <a href="#mensjackets" class="genreheader">Mens
+            <span class="genretxt">Browse the mens collection</span>
+          </a>
         </div>
-      </footer>
+      </div>
+    </section>
+
+    <section class="listofjackets" id="womensjackets">
+      <h2 class="gender">Women</h2>
+      <div class="jackets_scrollbox">
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/couple_cropped.jpg" class="productpic" alt="womens jacket" title="jacket for women">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="listofjackets" id="mensjackets">
+      <h2 class="gender">Men</h2>
+      <div class="jackets_scrollbox">
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+        <div class="jacketbox">
+          <a href="product.html">
+            <img src="images/edvin_cropped.jpg" class="productpic" alt="mens jacket" title="jacket for men">
+          </a>
+          <a href="product.html" class="cta_btn">Buy now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="other_products">
+      <h3>Learn more about our products:</h3>
+      <div class="types_of_clothes">
+        <div class="genrebox" id="inspo">
+          <a href="product.html" class="genreheader"
+            >Insiration
+            <span class="genretxt">Find inspiration in our Guidebook</span>
+          </a>
+        </div>
+        <div class="genrebox" id="tech">
+          <a href="product.html" class="genreheader"
+            >Tech
+            <span class="genretxt">Read about our tech</span>
+          </a>
+        </div>
+        
+    </section>
+    
+  </main>
+
+  <footer>
+    <div class="some">
+      <a class="some_icon" href="https://www.facebook.com/" title="facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a class="some_icon" href="https://www.instagram.com/" title="instagram">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a class="some_icon" href="https://twitter.com/" title="twitter">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </div>
+    <div class="about">
+      <h4 class="cs_header">About us</h4>
+      <ul class="cs_ul">
+        <li class="cs_li"><a href="about.html">Our Story</a></li>
+        <li class="cs_li"><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>

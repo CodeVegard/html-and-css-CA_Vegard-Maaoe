@@ -1,23 +1,25 @@
 @import url("imports/variables.css");
 
-.gobygenre{
-    width: 750px;
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    max-width: 750px;
     margin: auto;
+}
+
+.gobygenre{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+h1, h2, h3{
+    text-align: center;
 }
 
 .article_header{
     text-align: center;
-}
-
-.types_of_clothes{
-    max-height: 800px;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: stretch;
-    align-items: stretch;
-    margin-top: 0px;
 }
 
 .genrebox{
@@ -33,8 +35,16 @@
     max-height: 300px;
 }
 
-#gear{
-    background-image: url(../images/sindre_cropped.jpg);
+.types_of_clothes{
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#inspo, #tech, #womens, #mens{
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -43,34 +53,21 @@
     height: 300px;
 }
 
-#shoes{
+#inspo{
+    background-image: url(../images/sindre_cropped.jpg);
+}
+
+
+#tech{
     background-image: url(../images/waterproof.jpg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
 }
 
 #womens{
     background-image: url(../images/couple_cropped.jpg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
 }
 
 #mens{
     background-image: url(../images/edvin_cropped.jpg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
 }
 
 .genreheader{
@@ -89,3 +86,50 @@
     font-size: 1rem;
     font-family: var(--regular-fonts)
 }
+
+.listofjackets{
+    max-width: 750px;
+    margin: auto;
+}
+
+.jackets_scrollbox{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+/*
+    The "webkit-scrollbar" effects were done with inspiration from https://css-tricks.com/css-only-carousel/
+    If I find the time, I might make a proper carousel with looping, but I'm happy with  this for now. 
+  */
+
+.jackets_scrollbox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.jackets_scrollbox::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.733);
+  border-radius: 10px;
+}
+.jackets_scrollbox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.jacketbox{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 20px;
+}
+
+.jacketbox:nth-child(1){
+    margin-left: 0px;  /* Added to align the 1st image to the header */
+}
+
+.productpic{
+    height: 150px;
+    width: 150px; 
+}
+
