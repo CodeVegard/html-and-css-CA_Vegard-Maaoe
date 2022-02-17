@@ -3,20 +3,11 @@ The required pages are:
 Home  - DONE
 List of Jackets - IN PROGRESS
 	- The scrollbar can have a fade-effect to prompt the user to 
-	  scroll, even if the scrollbar is hidden (TAKK PETTER <3)
+	  scroll, even if the scrollbar is hidden
 A jacket specific page showing the jacket - IN PROGRESS
 A checkout page -
-A checkout success
+A checkout success page -
 About - IN PROGRESS 
 Contact	- IN PROGRESS
 
 
-
-max-width: 1000px;
-    margin: 50px auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-
-<h1 class="article_header">Browse by Category:</h1>

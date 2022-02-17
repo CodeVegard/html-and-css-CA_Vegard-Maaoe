@@ -12,7 +12,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 100%;
-    margin: auto;
+    margin: auto auto auto 0px;
 }
 
 .big_img{
@@ -43,7 +43,7 @@
 .prod_text{
     text-align: center;
     display: inline-block;
-    margin: auto;
+    margin: auto auto auto 0px;
     max-width: 464px;
 }
 
@@ -115,8 +115,24 @@ input[type=submit]:hover{
     cursor: pointer;
 }
 
+
+.moreinfo{
+    max-width: 1200px;
+    margin: 25px auto 0px;
+    min-height: 800px;
+    background-image: url(../images/rocking_mountains_mediumres.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    background-position-x: 50%;
+    background-position-y: 15%;
+}
+
 @media (min-width: 600px) {
     .product_presentation{
         margin-top: 25px;
+    }
+    .moreinfo{
+        background-position-x: 0%;
+        background-position-y: 0%;
     }
 }
