@@ -1,67 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="The Jacket is cool and unique!"
-    />
-    <script
-      src="https://kit.fontawesome.com/efafec28fb.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Rainydays - The Jacket</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo.png"
-          class="header_logo"
-          alt="RainyDays Logo"
-      /></a>
-      <label for="hamburger_menu" class="menubox"
-        ><i class="fas fa-bars" id="menu_icon"></i
-      ></label>
-      <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
-      <nav class="navigation">
-        <ul class="nav_ul">
-          <li class="nav_li"><a href="jackets.html">ALL</a></li> 
-          <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
-          <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
-        </ul>
-      </nav>
-    </header>
-    
 
-    <footer>
-        <div class="some">
-          <a class="some_icon" href="https://www.facebook.com/" title="facebook">
-            <i class="fab fa-facebook-square"></i>
-          </a>
-          <a class="some_icon" href="https://www.instagram.com/" title="instagram">
-            <i class="fab fa-instagram-square"></i>
-          </a>
-          <a class="some_icon" href="https://twitter.com/" title="twitter">
-            <i class="fab fa-twitter-square"></i>
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Jacket is cool and unique!" />
+  <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/checkout.css">
+  <title>Rainydays - Checkout</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="images/RainyDays_Logo.png" class="header_logo" alt="RainyDays Logo" /></a>
+    <label for="hamburger_menu" class="menubox"><i class="fas fa-bars" id="menu_icon"></i></label>
+    <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
+    <nav class="navigation">
+      <ul class="nav_ul">
+        <li class="nav_li"><a href="jackets.html">ALL</a></li>
+        <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
+        <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--  I pulled inspiration from w3schools on this part of the site, https://www.w3schools.com/howto/howto_css_checkout_form.asp  -->
+  <section class="checkout">
+    <h1>Order Summary:</h1>
+    <div class="checkout_box">
+      <div class="order_summary">
+       
+        <div class="order_product">
+          <img src="images/edvin_cropped.jpg" class="webshop_rowpic" alt="The Jacket" title="The Jacket">
+          <h2 class="product_name">The Jacket</h2>
+          <p class="product_description">Green <span class="color"></span></p>
+          <p class="product_description">999 kr</p>
         </div>
-        <div class="about">
-          <h2 class="cs_header">About us</h2>
-          <ul class="cs_ul">
-            <li class="cs_li"><a href="about.html">Our Story</a></li>
-            <li class="cs_li"><a href="contact.html">Contact us</a></li>
-          </ul>
+
+        <form action="" class="billing_info">
+        <div class="billing">
+          <label for="name">Full Name</label>
+          <input type="text" name="fullname" id="name" placeholder="Full Name">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="you@email.com">
+          <label for="street">Address</label>
+          <input type="text" name="street" id="street" placeholder="42 Wallaby Way">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" placeholder="Sydney">
+          
+          <div class="small_box">
+            <div class="smallfields">
+              <label for="country" class="small_label">Country</label>
+              <input type="text" name="country" id="country" placeholder="AUS">
+            </div>
+            <div class="smallfields">
+              <label for="zip" class="small_label">Zip Code</label>
+              <input type="number" name="zip" id="zip" placeholder="1234">
+            </div>
+            </div>
+            <label for="shipping">
+              <input checked type="checkbox" name="shipping" id="shipping"> Shipping address is same as billing
+            </label>
         </div>
-      </footer>
+
+        <div class="billing">
+          <label for="cardtype">Please select your card:</label>
+          <select name="cardtype" id="cardtype">
+            <option value="" disabled selected hidden>--Please choose one--</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+          </select>
+          <label for="card_owner">Name on Card</label>
+          <input type="text" name="card_owner" id="card_owner" placeholder="Name Nameson">
+          <label for="card_number">Card Number</label>
+          <input type="number" name="card_number" id="card_number" placeholder="1234-1234-1234-1234">
+          <div class="small_box">
+            <div class="smallfields">
+              <label for="expiry" class="small_label">Country</label>
+              <input type="number" name="expiry" id="expiry" placeholder="00/00">
+            </div>
+            <div class="smallfields">
+              <label for="ccv" class="small_label">CCV</label>
+              <input type="number" name="ccv" id="ccv" placeholder="123">
+            </div>
+            </div>
+
+            <input type="submit" name="checkout_finish" id="checkout_finish" value="Complete checkout">
+
+        </div>
+        
+      </form>
+      </div>
+  </section>
+
+  <footer>
+    <div class="some">
+      <a class="some_icon" href="https://www.facebook.com/" title="facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a class="some_icon" href="https://www.instagram.com/" title="instagram">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a class="some_icon" href="https://twitter.com/" title="twitter">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </div>
+    <div class="about">
+      <h2 class="cs_header">About us</h2>
+      <ul class="cs_ul">
+        <li class="cs_li"><a href="about.html">Our Story</a></li>
+        <li class="cs_li"><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
+
 </html>

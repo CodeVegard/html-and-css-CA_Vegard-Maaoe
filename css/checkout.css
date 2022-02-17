@@ -1,0 +1,78 @@
+.checkout{
+    min-height: 800px;
+}
+
+.order_summary{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.order_product{
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.product_name{
+    font-size: 1rem;
+    font-family: var(--regular-fonts);
+    margin: 3px auto;
+}
+
+.product_description{
+    margin: 3px auto;   
+}
+.color{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+}
+
+.billing_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+}
+
+.billing{
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.billing > label, .billing > input, select{
+    font-family: var(--regular-fonts);
+    max-width: 100%;
+    margin: 3px 0px;
+}
+
+.small_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.smallfields{
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+#checkout_finish{
+    width: 175px;
+    margin: 40px auto 0px;
+}

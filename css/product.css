@@ -29,16 +29,22 @@
     overflow-x: auto;
 }
 
-::-webkit-scrollbar{
-    width: 0;
+.tiny_pics::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+.tiny_pics::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.733);
+    border-radius: 10px;
+  }
+.tiny_pics::-webkit-scrollbar-track {
     background: transparent;
-}
+  }
 
 .small_img{
     max-width: 130px;
     margin: 2px;
 }
-
 
 .prod_text{
     text-align: center;
