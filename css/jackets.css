@@ -82,6 +82,11 @@ h1, h2, h3{
     justify-content: flex-end;
     background-color: #0000000f;
 }
+
+.gender{
+    text-align: start;
+}
+
 .genretxt{
     font-size: 1rem;
     font-family: var(--regular-fonts)
