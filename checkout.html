@@ -43,25 +43,25 @@
           <p class="product_description">999 kr</p>
         </div>
 
-        <form action="" class="billing_info">
+        <form action="checkout_success.html" method="get" class="billing_info">
         <div class="billing">
           <label for="name">Full Name</label>
-          <input type="text" name="fullname" id="name" placeholder="Full Name">
+          <input type="text" name="fullname" id="name" placeholder="Full Name" required >
           <label for="email">Email</label>
-          <input type="text" name="email" id="email" placeholder="you@email.com">
+          <input type="email" name="email" id="email" placeholder="you@email.com" required >
           <label for="street">Address</label>
-          <input type="text" name="street" id="street" placeholder="42 Wallaby Way">
+          <input type="text" name="street" id="street" placeholder="42 Wallaby Way" required >
           <label for="city">City</label>
-          <input type="text" name="city" id="city" placeholder="Sydney">
+          <input type="text" name="city" id="city" placeholder="Sydney" required >
           
           <div class="small_box">
             <div class="smallfields">
               <label for="country" class="small_label">Country</label>
-              <input type="text" name="country" id="country" placeholder="AUS">
+              <input type="text" name="country" id="country" placeholder="AUS" required >
             </div>
             <div class="smallfields">
               <label for="zip" class="small_label">Zip Code</label>
-              <input type="number" name="zip" id="zip" placeholder="1234">
+              <input type="number" name="zip" id="zip" placeholder="1234" required >
             </div>
             </div>
             <label for="shipping">
@@ -71,23 +71,40 @@
 
         <div class="billing">
           <label for="cardtype">Please select your card:</label>
-          <select name="cardtype" id="cardtype">
+          <select name="cardtype" id="cardtype" required >
             <option value="" disabled selected hidden>--Please choose one--</option>
             <option value="visa">Visa</option>
             <option value="mastercard">MasterCard</option>
           </select>
           <label for="card_owner">Name on Card</label>
-          <input type="text" name="card_owner" id="card_owner" placeholder="Name Nameson">
+          <input type="text" name="card_owner" id="card_owner" placeholder="Name Nameson" required >
           <label for="card_number">Card Number</label>
-          <input type="number" name="card_number" id="card_number" placeholder="1234-1234-1234-1234">
+          <input type="number" name="card_number" id="card_number" placeholder="1234-1234-1234-1234" required >
           <div class="small_box">
-            <div class="smallfields">
-              <label for="expiry" class="small_label">Country</label>
-              <input type="number" name="expiry" id="expiry" placeholder="00/00">
-            </div>
+            <fieldset class="smallfields">
+              <legend></legend>
+              <label for="expiry_month" class="small_label">Expiration Month</label>
+              <select name="expiry_month" id="expiry_month" required>
+                <option value="" disabled selected hidden>Month</option>
+                <option value='01'>Janaury</option>
+                <option value='02'>February</option>
+                <option value='03'>March</option>
+                <option value='04'>April</option>
+                <option value='05'>May</option>
+                <option value='06'>June</option>
+                <option value='07'>July</option>
+                <option value='08'>August</option>
+                <option value='09'>September</option>
+                <option value='10'>October</option>
+                <option value='11'>November</option>
+                <option value='12'>December</option>
+              </select>
+              <label for="exipiry_year"> Expiration Year</label>
+              <input type="number" name="exipiry_year" id="exipiry_year" placeholder="Year" required min="2022">
+            </fieldset>
             <div class="smallfields">
               <label for="ccv" class="small_label">CCV</label>
-              <input type="number" name="ccv" id="ccv" placeholder="123">
+              <input type="number" name="ccv" id="ccv" placeholder="123" max="999" required >
             </div>
             </div>
 
