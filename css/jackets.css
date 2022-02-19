@@ -95,6 +95,7 @@ h1, h2, h3{
 .listofjackets{
     max-width: 750px;
     margin: auto;
+    padding: 0px 10px;
 }
 
 .jackets_scrollbox{
