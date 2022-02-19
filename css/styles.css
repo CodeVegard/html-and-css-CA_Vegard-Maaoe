@@ -30,15 +30,22 @@ header{
     flex-direction: row;
     height: 50px;
     background-color: var(--primary-color);
+    border-bottom: 2px solid black;
 }
 
 header > a{
     padding: 5px;
     width: 100px; 
+    display: flex;
+    align-items: center;
 }
+/* Added flex to center my logo */
 
 .header_logo{
     height: 100%;
+    background-color: var(--logo-color);
+    padding: 3px;
+    border-radius: 10px;
 }
 
 .nav_ul{
@@ -46,7 +53,7 @@ header > a{
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0px auto;
-    background-color: #78AB41;
+    background-color: var(--primary-color);
     width: 100%;
     border-radius: 0px 0px 0px 15px;
     padding: 50px 0px 0px 0px;
@@ -241,6 +248,7 @@ footer{
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 3fr 1fr;
+    background-color: var(--primary-color);
 }
 
 .some{
@@ -248,6 +256,7 @@ footer{
     flex-direction: row;
     margin-left: 0px;
     align-items: center;
+    background-color: var(--primary-color);
 }
 
 a > i{
@@ -260,8 +269,10 @@ a > i{
 
 .about{
     align-self: flex-end;
-    margin: 5px 5% 5px 0px;
+    background-color: var(--primary-color);
 }
+
+/* Had to add the background color to all elements in the footer as the footer div is only 50px, while the  content takes up more space than that. And setting height on the footer to be 100% made the footer way too tall. Adding bg-color to all elements seems to be the way to go here */
 
 .cs_header{
     margin: 0px;

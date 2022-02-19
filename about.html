@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rainydays - about us" />
+    <script
+      src="https://kit.fontawesome.com/efafec28fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <title>Rainydays - About us</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Rainydays - about us" />
-  <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/about.css" />
-  <title>Rainydays - About us</title>
-</head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="images/RainyDays_Logo - Inverted.png"
+          class="header_logo"
+          alt="RainyDays Logo"
+      /></a>
+      <label for="hamburger_menu" class="menubox"
+        ><i class="fas fa-bars" id="menu_icon"></i
+      ></label>
+      <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
+      <nav class="navigation">
+        <ul class="nav_ul">
+          <li class="nav_li"><a href="jackets.html">ALL</a></li>
+          <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
+          <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <a href="index.html"
-      ><img
-        src="images/RainyDays_Logo.png"
-        class="header_logo"
-        alt="RainyDays Logo"
-    /></a>
-    <label for="hamburger_menu" class="menubox"
-      ><i class="fas fa-bars" id="menu_icon"></i
-    ></label>
-    <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
-    <nav class="navigation">
-      <ul class="nav_ul">
-        <li class="nav_li"><a href="jackets.html">ALL</a></li> 
-        <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
-        <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+      <section class="rd_mission">
+        <div class="mission_box">
+          <h2 class="mission_header">The Rainydays Mission:</h2>
+          <p class="mission_statement">
+            We seek to enable, encourage and empower our customers to push the
+            limit of what's possible.
+          </p>
+          <p class="mission_statement">
+            Through 15 years of experience and research, we have created and
+            curated cutting edge equipment for those who brave the wilderness in
+            search of incredible experiences.
+          </p>
+        </div>
+      </section>
+    </main>
 
-  <main>
-    <section class="rd_mission">
-      <div class="mission_box">
-        <h2 class="mission_header">The Rainydays Mission:</h2>
-        <p class="mission_statement">
-          We seek to enable, encourage and empower our customers to push the
-          limit of what's possible.
-        </p>
-        <p class="mission_statement">
-          Through 15 years of experience and research, we have created and
-          curated cutting edge equipment for those who brave the wilderness in
-          search of incredible experiences.
-        </p>
+    <footer>
+      <div class="some">
+        <a class="some_icon" href="https://www.facebook.com/" title="facebook">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a
+          class="some_icon"
+          href="https://www.instagram.com/"
+          title="instagram"
+        >
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a class="some_icon" href="https://twitter.com/" title="twitter">
+          <i class="fab fa-twitter-square"></i>
+        </a>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="some">
-      <a class="some_icon" href="https://www.facebook.com/" title="facebook">
-        <i class="fab fa-facebook-square"></i>
-      </a>
-      <a class="some_icon" href="https://www.instagram.com/" title="instagram">
-        <i class="fab fa-instagram-square"></i>
-      </a>
-      <a class="some_icon" href="https://twitter.com/" title="twitter">
-        <i class="fab fa-twitter-square"></i>
-      </a>
-    </div>
-    <div class="about">
-      <h2 class="cs_header">About us</h2>
-      <ul class="cs_ul">
-        <li class="cs_li"><a href="about.html">Our Story</a></li>
-        <li class="cs_li"><a href="contact.html">Contact us</a></li>
-      </ul>
-    </div>
-  </footer>
-</body>
-
+      <div class="about">
+        <h2 class="cs_header">About us</h2>
+        <ul class="cs_ul">
+          <li class="cs_li"><a href="about.html">Our Story</a></li>
+          <li class="cs_li"><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
