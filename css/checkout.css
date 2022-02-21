@@ -1,13 +1,14 @@
 .checkout{
     min-height: 800px;
+    margin: 50px auto;
+    max-width: 1100px;
 }
 
 .checkout_box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: auto;
-    max-width: 1100px;
+
 }
 
 .order_summary{
@@ -16,6 +17,7 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
+    justify-content: space-around;
 }
 
 .order_product{
@@ -29,7 +31,7 @@
 }
 
 .product_name{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: var(--regular-fonts);
     margin: 3px auto;
 }
@@ -50,6 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 700px;
+    justify-content: space-around;
 }
 
 .billing{
@@ -67,6 +70,10 @@
     font-family: var(--regular-fonts);
     max-width: 100%;
     margin: 5px 0px;
+}
+
+legend{
+    display: none;
 }
 
 .small_box {

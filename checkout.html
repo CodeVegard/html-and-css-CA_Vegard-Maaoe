@@ -39,11 +39,11 @@
 
   <!--  I pulled inspiration from w3schools on this part of the site, https://www.w3schools.com/howto/howto_css_checkout_form.asp  -->
   <section class="checkout">
-    <h1>Order Summary:</h1>
+    
     <div class="checkout_box">
       <div class="order_summary">
-       
         <div class="order_product">
+          <h1>Order Summary:</h1>
           <img src="images/edvin_cropped.jpg" class="webshop_rowpic" alt="The Jacket" title="The Jacket">
           <h2 class="product_name">The Jacket</h2>
           <p class="product_description">Green <span class="color"></span></p>
@@ -51,7 +51,9 @@
         </div>
 
         <form action="checkout_success.html" method="get" class="billing_info">
-        <div class="billing">
+        <fieldset class="billing">
+          <legend>Persona</legend>
+          <!--I've come to understand that the legend element is helpful for assistive technologies, but I don't think it looks good on the page. So I've added legend to the fieldsets with display:none;-->
           <label for="name">Full Name</label>
           <input type="text" name="fullname" id="name" placeholder="Full Name" required >
           <label for="email">Email</label>
@@ -74,9 +76,10 @@
             <label for="shipping">
               <input checked type="checkbox" name="shipping" id="shipping"> Shipping address is same as billing
             </label>
-        </div>
+        </fieldset>
 
-        <div class="billing">
+        <fieldset class="billing">
+          <legend>Payment info</legend>
           <label for="cardtype">Please select your card:</label>
           <select name="cardtype" id="cardtype" required >
             <option value="" disabled selected hidden>--Please choose one--</option>
@@ -89,7 +92,7 @@
           <input type="number" name="card_number" id="card_number" placeholder="1234-1234-1234-1234" required >
           <div class="small_box">
             <fieldset class="smallfields">
-              <legend></legend>
+              <legend>Card Expiry</legend>
               <label for="expiry_month" class="small_label">Expiration Month</label>
               <select name="expiry_month" id="expiry_month" required>
                 <option value="" disabled selected hidden>Month</option>
@@ -115,7 +118,7 @@
             </div>
             </div>
             <input type="submit" name="checkout_finish" id="checkout_finish" value="Complete checkout">
-        </div>
+        </fieldset>
       </form>
       </div>
 
@@ -149,5 +152,4 @@
     </div>
   </footer>
 </body>
-<script src="js/script.js"></script>
 </html>
