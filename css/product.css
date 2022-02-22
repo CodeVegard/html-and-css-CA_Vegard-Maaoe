@@ -83,6 +83,7 @@
     border-radius: 10px;
     text-decoration: none;
     width: 100%;
+    background-color: var(--cta-bg-color);
     color: black;
 }
 
@@ -106,7 +107,7 @@
 
 .chart:hover{
     color: black;
-    background-color: white;
+    background-color: var(--cta-bg-color);
 }
 
 /* The contrast on the buy buttons was awful, bordering on useless for colorblind people (green + orange). Went with black and white buttons with inspiration from nomaden.no */

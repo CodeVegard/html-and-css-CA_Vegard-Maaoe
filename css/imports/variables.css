@@ -2,7 +2,8 @@
     --primary-color: #F8F0E3;
     --header-fonts: 'Oswald', 'Open Sans', Arial, Helvetica, sans-serif;
     --regular-fonts: 'Quicksand', 'Open Sans', Arial, Helvetica, sans-serif;
-    --cta-bg-color: #DF7C1F;
+    --cta-bg-color: #F8F0E3;
+    --cta-bg-hover: #000000;
     --logo-color: #297430;
 }
 

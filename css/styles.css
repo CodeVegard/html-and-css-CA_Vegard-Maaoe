@@ -134,6 +134,11 @@ header > a{
     margin: 10px 10px 20px 10px;
 }
 
+.cta_btn:hover{
+    background-color: var(--cta-bg-hover);
+    color: var(--cta-bg-color);
+}
+
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
 
 nav{
