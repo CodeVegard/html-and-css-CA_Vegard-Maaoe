@@ -88,11 +88,7 @@ header > a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: right;
-    display: flex;  /*  I'VE SET THIS TO FLEX SO THAT THE HERO_MASK DIV CAN FLEX-GROW TO FILL 
-                        THE ENTIRE  CONTAINER. 
-                        THIS, IN TURN WAS DONE TO CREATE A MASK ON TOP OF THE IMAGE, WHICH ENHANCES THE CONTRAST WITHOUT NEED FOR PHOTOSHOPPING.
-                        AND WHILE PHOTOSHOPPING MIGHT BE EASIER, I WANT TO DO AS MUCH AS POSSIBLE IN CSS. THE TASK ISN'T LEARNING PHOTOSHOP, BUT HTML/CSS. 
-                        AS AN ADDED BONUS, I WAS ABLE TO MAKE A HIGH CONTRAST VERSION FOR MOBILE, WHERE THE TEXT WAS HARD TO SEE DUE TO IT'S PLACEMENT */
+    display: flex; 
 }
 
 .hero_mask{
