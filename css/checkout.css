@@ -116,6 +116,11 @@ input[type=number] {
     padding: 0px;
 }
 
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
 #ccv{
     margin: 5px 0px;
 }
