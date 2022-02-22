@@ -81,6 +81,7 @@ legend{
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 8px;
+    align-items: flex-end;
 }
 
 .smallfields{
@@ -90,6 +91,10 @@ legend{
     border: none;
     font-family: var(--regular-fonts);
     padding: 0px;
+}
+
+#ccv{
+    margin: 5px 0px;
 }
 
 #checkout_finish{

@@ -2,12 +2,33 @@
     max-width: 750px;
     margin: auto;
     min-height: 550px;
+    padding: 0px 15px;
 }
 
 h1{
     text-align: center;
 }
 
+a{
+    color: #FFFFFF;
+    background-color: #ffffff5d;
+}
+
 .order_text:nth-child(1){
     font-size: 1.5rem;
+}
+
+.hero_story{
+    max-height: none;
+}
+
+.hero_mask{
+    background-color: #00000061;
+}
+
+
+@media (max-width:600px){
+    .hero_txt{
+        top: 0px;
+    }
 }

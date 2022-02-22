@@ -106,13 +106,16 @@ header > a{
     top: 200px;  
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
+  
 }
 
 .hero_txt > *{
     color: #FFFFFF;
     font-size: 1.4rem;
     text-align: center;
+    max-width: 700px;
+    padding: 15px;
 }
 
 .hero_txt > h1{
