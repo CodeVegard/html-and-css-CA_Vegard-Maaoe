@@ -37,7 +37,7 @@ console.log(emailcoded);
 //https://stackoverflow.com/questions/31803648/decoding-40-back-to-using-jquery-to-populate-input-fields 
 
 
-// And this seems to work, but there's two arrays and I only want the last one. Finally found a solution here:
+// And this seems to work, but there's two arrays (ie, "123%40123.no&s" AND "123%40123.no&s") and I only want the first one. Found a solution here:
 //https://stackoverflow.com/questions/4090491/how-to-get-the-first-element-of-an-array
 
 let emaildecoded = decodeURIComponent(emailcoded[0]);
