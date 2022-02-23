@@ -7,28 +7,48 @@ function getRandomInt(min, max) {
 }
 
 console.log(getRandomInt());
-// This was simply added to make check that the function runs properly.
+// I can see this runs like it should
 
 let random_number = "random_number"
 
-document.getElementById("random_number").innerHTML= getRandomInt()
+document.getElementById("random_number").innerHTML= getRandomInt();
 
 
 // I also want to add a function which gets the email from my form (which is shown in the URL when filling out the form). 
 // getting URL by using this method: https://stackoverflow.com/questions/6257463/how-to-get-the-url-without-any-parameters-in-javascript
 
-let url = window.location.href.split('?')
+let url = window.location.href.split('?');
 
-console.log(url)
+console.log(url);
 
 // getting a basic grasp on regex via:
 //https://tutorial.eyehunts.com/js/javascript-extract-email-from-string-regex-example-code/
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions 
 
-let regex = /([a-zA-Z0-999999._-]+%[a-zA-Z0-999999._-]+.[a-z])/; 
+let regex = /([email]+[a-zA-Z0-999999._-]+%[a-zA-Z0-999999._-]+.[a-z])/; 
 
-let email = regex.exec(url)
+let emailcoded = regex.exec(url);
 
-console.log(email)
+console.log(emailcoded);
 
 // At this point I get "123%40123.no&s" when inputing "123@123.no" as the email, or "abc%40acb.no&s" from "abc@abc.no"
+
+// Found a possible solution here:
+//https://stackoverflow.com/questions/31803648/decoding-40-back-to-using-jquery-to-populate-input-fields 
+
+let emaildecoded = decodeURIComponent(emailcoded[0]);
+
+console.log(emaildecoded);
+
+// This works, but I'm left with "abc@acb.no&s". Found a possible solution here:
+//https://flaviocopes.com/how-to-remove-last-char-string-js/ 
+
+let emailsliced = emaildecoded.slice(0, -2)
+
+console.log(emailsliced);
+
+// And this seems to work, but there's two arrays and I only want the last one. 
+
+document.getElementById("email").innerHTML= emailsliced;
+
+
