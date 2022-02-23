@@ -21,7 +21,7 @@ let url = window.location.href.split('?');
 
 console.log(url);
 
-// getting a basic grasp on regex via:
+// Getting a basic grasp on regex via:
 //https://tutorial.eyehunts.com/js/javascript-extract-email-from-string-regex-example-code/
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions 
 
@@ -54,4 +54,4 @@ console.log(emailsliced);
 
 document.getElementById("email").innerHTML= emailsliced;
 
-
+//I know this is probably both ugly and insecure, but that wasn't my goal. JS is not in the corriculum atm, this was only done for fun.

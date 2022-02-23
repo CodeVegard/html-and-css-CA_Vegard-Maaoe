@@ -1,246 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Checkout in progress" />
-    <script
-      src="https://kit.fontawesome.com/efafec28fb.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/checkout.css" />
-    <title>Rainydays - Checkout</title>
-  </head>
 
-  <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images/RainyDays_Logo_Inverted.png"
-          class="header_logo"
-          alt="RainyDays Logo"
-      /></a>
-      <label for="hamburger_menu" class="menubox"
-        ><i class="fas fa-bars" id="menu_icon"></i
-      ></label>
-      <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
-      <nav class="navigation">
-        <ul class="nav_ul">
-          <li class="nav_li"><a href="jackets.html">ALL</a></li>
-          <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
-          <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Checkout in progress" />
+  <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Quicksand:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+  <title>Rainydays - Checkout</title>
+</head>
 
-    <!--  I pulled inspiration from w3schools on this part of the site, https://www.w3schools.com/howto/howto_css_checkout_form.asp  -->
-    <section class="checkout">
-      <div class="checkout_box">
-        <div class="order_summary">
-          <div class="billing">
-            <h1>Order Summary:</h1>
-            <img
-              src="images/edvin_cropped.jpg"
-              class="webshop_rowpic"
-              alt="The Jacket"
-              title="The Jacket"
-            />
-            <h2 class="product_name">The Jacket</h2>
-            <p class="product_description">Green <span class="color"></span></p>
-            <p class="product_description">999 kr</p>
-          </div>
+<body>
+  <header>
+    <a href="index.html"><img src="images/RainyDays_Logo_Inverted.png" class="header_logo" alt="RainyDays Logo" /></a>
+    <label for="hamburger_menu" class="menubox"><i class="fas fa-bars" id="menu_icon"></i></label>
+    <input type="checkbox" name="hamburger_menu" id="hamburger_menu" />
+    <nav class="navigation">
+      <ul class="nav_ul">
+        <li class="nav_li"><a href="jackets.html">ALL</a></li>
+        <li class="nav_li"><a href="jackets.html#mensjackets">MEN</a></li>
+        <li class="nav_li"><a href="jackets.html#womensjackets">WOMEN</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <form
-            action="checkout_success.html"
-            method="get"
-            class="billing_info"
-          >
-            <fieldset class="billing">
-              <legend>Persona</legend>
-              <!--I've come to understand that the legend element is helpful for assistive technologies, but I don't think it looks good on the page. So I've added legend to the fieldsets with display:none;-->
-              <label for="name">Full Name</label>
-              <input
-                type="text"
-                name="fullname"
-                id="name"
-                placeholder="Full Name"
-                required
-              />
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="your@email.com"
-                required
-              />
-              <label for="street">Address</label>
-              <input
-                type="text"
-                name="street"
-                id="street"
-                placeholder="42 Wallaby Way"
-                required
-              />
-              <label for="city">City</label>
-              <input
-                type="text"
-                name="city"
-                id="city"
-                placeholder="Sydney"
-                required
-              />
-
-              <div class="small_box">
-                <div class="smallfields">
-                  <label for="country" class="small_label">Country</label>
-                  <input
-                    type="text"
-                    name="country"
-                    id="country"
-                    placeholder="AUS"
-                    required
-                  />
-                </div>
-                <div class="smallfields">
-                  <label for="zip" class="small_label">Zip Code</label>
-                  <input
-                    type="number"
-                    name="zip"
-                    id="zip"
-                    placeholder="1234"
-                    required
-                  />
-                </div>
-              </div>
-              <label for="shipping" class="checkbox">
-                <input checked type="checkbox" name="shipping" id="shipping" />
-                Shipping address is same as billing
-              </label>
-            </fieldset>
-
-            <fieldset class="billing">
-              <legend>Payment info</legend>
-              <label for="cardtype">Please select your card:</label>
-              <select name="cardtype" id="cardtype" required>
-                <option value="" disabled selected hidden>
-                  --Please choose one--
-                </option>
-                <option value="visa">Visa</option>
-                <option value="mastercard">MasterCard</option>
-              </select>
-              <label for="card_owner">Name on Card</label>
-              <input
-                type="text"
-                name="card_owner"
-                id="card_owner"
-                placeholder="Name Nameson"
-                required
-              />
-              <label for="card_number">Card Number</label>
-              <input
-                type="number"
-                name="card_number"
-                id="card_number"
-                placeholder="1234-1234-1234-1234"
-                max="9999999999999999"
-                required
-              />
-              <div class="small_box">
-                <fieldset class="smallfields">
-                  <legend>Card Expiry</legend>
-                  <label for="expiry_month" class="small_label"
-                    >Expiration Month</label
-                  >
-                  <select name="expiry_month" id="expiry_month" required>
-                    <option value="" disabled selected hidden>Month</option>
-                    <option value="01">Janaury</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                  </select>
-                  <label for="exipiry_year"> Expiration Year</label>
-                  <input
-                    type="number"
-                    name="exipiry_year"
-                    id="exipiry_year"
-                    placeholder="Year"
-                    required
-                    min="2022"
-                  />
-                </fieldset>
-                <div class="smallfields">
-                  <label for="ccv" class="small_label">CCV</label>
-                  <input
-                    type="number"
-                    name="ccv"
-                    id="ccv"
-                    placeholder="123"
-                    max="999"
-                    required
-                  />
-                </div>
-              </div>
-              <input
-                class="cta_btn"
-                type="submit"
-                name="checkout_finish"
-                id="checkout_finish"
-                value="Complete checkout"
-              />
-            </fieldset>
-          </form>
+  <!--  I pulled inspiration from w3schools on this part of the site, https://www.w3schools.com/howto/howto_css_checkout_form.asp  -->
+  <section class="checkout">
+    <div class="checkout_box">
+      <div class="order_summary">
+        <div class="billing">
+          <h1>Order Summary:</h1>
+          <img src="images/edvin_cropped.jpg" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />
+          <h2 class="product_name">The Jacket</h2>
+          <p class="product_description">Green <span class="color"></span></p>
+          <p class="product_description">999 kr</p>
         </div>
 
-        <div>
-          <p>
-            NOTE: All fields must be filled out before using the "Complete checkout" button.
-            To get to the checkout success page faster, click
-            <a href="checkout_success.html" title="success page">here</a>
-          </p>
-        </div>
-      </div>
-    </section>
+        <form action="checkout_success.html" method="get" class="billing_info">
+          <fieldset class="billing">
+            <legend>Persona</legend>
+            <!--I've come to understand that the legend element is helpful for assistive technologies, but I don't think it looks good on the page. So I've added legend to the fieldsets with display:none;-->
+            <label for="name">Full Name</label>
+            <input type="text" name="fullname" id="name" placeholder="Full Name" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="your@email.com" required />
+            <label for="street">Address</label>
+            <input type="text" name="street" id="street" placeholder="42 Wallaby Way" required />
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" placeholder="Sydney" required />
 
-    <footer>
-      <div class="some">
-        <a class="some_icon" href="https://www.facebook.com/" title="facebook">
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a
-          class="some_icon"
-          href="https://www.instagram.com/"
-          title="instagram"
-        >
-          <i class="fab fa-instagram-square"></i>
-        </a>
-        <a class="some_icon" href="https://twitter.com/" title="twitter">
-          <i class="fab fa-twitter-square"></i>
-        </a>
+            <div class="small_box">
+              <div class="smallfields">
+                <label for="country" class="small_label">Country</label>
+                <input type="text" name="country" id="country" placeholder="AUS" required />
+              </div>
+              <div class="smallfields">
+                <label for="zip" class="small_label">Zip Code</label>
+                <input type="number" name="zip" id="zip" placeholder="1234" required />
+              </div>
+            </div>
+            <label for="shipping" class="checkbox">
+              <input checked type="checkbox" name="shipping" id="shipping" />
+              Shipping address is same as billing
+            </label>
+          </fieldset>
+
+          <fieldset class="billing">
+            <legend>Payment info</legend>
+            <label for="cardtype">Please select your card:</label>
+            <select name="cardtype" id="cardtype" required>
+              <option value="" disabled selected hidden>
+                --Please choose one--
+              </option>
+              <option value="visa">Visa</option>
+              <option value="mastercard">MasterCard</option>
+            </select>
+            <label for="card_owner">Name on Card</label>
+            <input type="text" name="card_owner" id="card_owner" placeholder="Name Nameson" required />
+            <label for="card_number">Card Number</label>
+            <input type="number" name="card_number" id="card_number" placeholder="1234-1234-1234-1234"
+              max="9999999999999999" required />
+            <div class="small_box">
+              <fieldset class="smallfields">
+                <legend>Card Expiry</legend>
+                <label for="expiry_month" class="small_label">Expiration Month</label>
+                <select name="expiry_month" id="expiry_month" required>
+                  <option value="" disabled selected hidden>Month</option>
+                  <option value="01">Janaury</option>
+                  <option value="02">February</option>
+                  <option value="03">March</option>
+                  <option value="04">April</option>
+                  <option value="05">May</option>
+                  <option value="06">June</option>
+                  <option value="07">July</option>
+                  <option value="08">August</option>
+                  <option value="09">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+                <label for="exipiry_year"> Expiration Year</label>
+                <input type="number" name="exipiry_year" id="exipiry_year" placeholder="Year" required min="2022" />
+              </fieldset>
+              <div class="smallfields">
+                <label for="ccv" class="small_label">CCV</label>
+                <input type="number" name="ccv" id="ccv" placeholder="123" max="999" required />
+              </div>
+            </div>
+            <input class="cta_btn" type="submit" name="checkout_finish" id="checkout_finish"
+              value="Complete checkout" />
+          </fieldset>
+        </form>
       </div>
-      <div class="about">
-        <h2 class="cs_header">About us</h2>
-        <ul class="cs_ul">
-          <li class="cs_li"><a href="about.html">Our Story</a></li>
-          <li class="cs_li"><a href="contact.html">Contact us</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <footer>
+    <div class="some">
+      <a class="some_icon" href="https://www.facebook.com/" title="facebook">
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a class="some_icon" href="https://www.instagram.com/" title="instagram">
+        <i class="fab fa-instagram-square"></i>
+      </a>
+      <a class="some_icon" href="https://twitter.com/" title="twitter">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+    </div>
+    <div class="about">
+      <h2 class="cs_header">About us</h2>
+      <ul class="cs_ul">
+        <li class="cs_li"><a href="about.html">Our Story</a></li>
+        <li class="cs_li"><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
