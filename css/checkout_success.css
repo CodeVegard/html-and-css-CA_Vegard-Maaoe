@@ -9,7 +9,7 @@ h1{
     text-align: center;
 }
 
-a{
+.order_text > a{
     color: #FFFFFF;
     background-color: #ffffff5d;
 }
