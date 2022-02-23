@@ -25,7 +25,7 @@ console.log(url);
 //https://tutorial.eyehunts.com/js/javascript-extract-email-from-string-regex-example-code/
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions 
 
-let regex = /([email]+[a-zA-Z0-999999._-]+%[a-zA-Z0-999999._-]+.[a-z])/; 
+let regex = /([email=]+[a-zA-Z0-999999._-]+%[a-zA-Z0-999999._-]+.[a-z])/g; 
 
 let emailcoded = regex.exec(url);
 
@@ -36,18 +36,21 @@ console.log(emailcoded);
 // Found a possible solution here:
 //https://stackoverflow.com/questions/31803648/decoding-40-back-to-using-jquery-to-populate-input-fields 
 
+
+// And this seems to work, but there's two arrays and I only want the last one. Finally found a solution here:
+//https://stackoverflow.com/questions/4090491/how-to-get-the-first-element-of-an-array
+
 let emaildecoded = decodeURIComponent(emailcoded[0]);
 
 console.log(emaildecoded);
 
+
 // This works, but I'm left with "abc@acb.no&s". Found a possible solution here:
 //https://flaviocopes.com/how-to-remove-last-char-string-js/ 
 
-let emailsliced = emaildecoded.slice(0, -2)
+let emailsliced = emaildecoded.slice(6, -2)
 
 console.log(emailsliced);
-
-// And this seems to work, but there's two arrays and I only want the last one. 
 
 document.getElementById("email").innerHTML= emailsliced;
 
