@@ -135,6 +135,10 @@ header > a{
     color: var(--cta-bg-color);
 }
 
+.cta_btn:disabled{
+    background-color: gray;
+}
+
 /* //////// THIS IS FOR CREATING THE HAMBURGER MENU //////// */
 
 nav{
