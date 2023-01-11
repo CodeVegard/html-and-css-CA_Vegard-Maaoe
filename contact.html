@@ -48,6 +48,7 @@
     <main>
       <section class="contact_info">
         <h1>Contact us</h1>
+        <div class="removeWhenSubmit">
         <ul class="contact_ul">
           <li>
             Phone:
@@ -72,8 +73,8 @@
             <label for="emailaddress">Your email:</label>
             <input
               type="email"
-              name="emailaddress"
-              id="emailaddress"
+              name="email"
+              id="email"
               placeholder="your@email.com"
             />
             <label for="customers_message"></label>
@@ -83,14 +84,20 @@
               cols="30"
               rows="10"
             ></textarea>
-            <input
+            <button 
+            class="cta_btn"
+            type="submit"
+            name="send_message"
+            id="send_message"
+            disabled="true">Send Message</button>
+            <!-- <input
               class="cta_btn"
               type="submit"
               name="send_message"
               id="send_message"
               disabled="true"
               value="Send Message"
-            />
+            /> -->
           </fieldset>
         </form>
         <p class="openhours">
@@ -99,6 +106,7 @@
             >contact@rainydays.com</a
           >
         </p>
+      </div>
       </section>
 
       <section class="onthemap">
@@ -141,5 +149,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/validateContactForm.js"></script>
   </body>
 </html>
