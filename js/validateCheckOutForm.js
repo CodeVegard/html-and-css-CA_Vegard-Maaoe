@@ -2,7 +2,7 @@ const ctaBtn = document.querySelector(".cta_btn");
 const nameInp = document.querySelector("#name");
 const mailInp = document.querySelector("#email");
 const addressInp = document.querySelector("#street");
-const cityInp= document.querySelector("#city");
+const cityInp = document.querySelector("#city");
 const countryInp = document.querySelector("#country");
 const zipInp = document.querySelector("#zip");
 const cardTypeInp = document.querySelector("#cardtype");
@@ -12,97 +12,86 @@ const cardMonthInp = document.querySelector("#expiry_month");
 const cardYearInp = document.querySelector("#exipiry_year");
 const cardCcvInp = document.querySelector("#ccv");
 
-function validateCheckOutForm() {
-    if(nameInp.value && mailInp.value && addressInp.value && cityInp.value && countryInp.value && zipInp.value && cardTypeInp.value && cardNameInp.value && cardNumberInp.value && cardMonthInp.value && cardYearInp.value && cardCcvInp.value){
-      ctaBtn.disabled = false;
+function regExTest(thingToCheck, expression, container) {
+  if (typeof thingToCheck === "number") { // Here's a nut to crack. When the thing I check is a number, I don't check the input itself, but the converted value stored in "zipNum". Because of that, my function can't target the correct HTML item to add a class to 
+    const checkThis = thingToCheck;
+    const result = expression.test(checkThis);
+    if (result ===  true && result !== null) {
+      container.classList.remove("invalid");
+      container.classList.add("valid");
+      console.log(thingToCheck);
+      console.dir(container)
     } else {
-      ctaBtn.disabled = true;
+      container.classList.remove("valid");
+      container.classList.add("invalid");
     }
+  }
+  if (typeof thingToCheck === "string") {
+    const checkThis = thingToCheck.value.toLowerCase();
+    const result = expression.test(checkThis);
+    if (result === true) {
+      thingToCheck.classList.remove("invalid");
+      thingToCheck.classList.add("valid");
+    } else {
+      thingToCheck.classList.remove("valid");
+      thingToCheck.classList.add("invalid");
+    }
+  }
+};
+
+function validateCheckOutForm(input, container) {
+  if (typeof input === "number") {
+    let regEx = /^\d+$/;
+    regExTest(input, regEx, container);
+  }
+  if (input === mailInp) {
+    let regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+    regExTest(input, regEx);
+  } else {
+    let regEx = /^[a-z æøå ,.'-]+$/;
+    regExTest(input, regEx);
+  }
+  if (nameInp.value && mailInp.value && addressInp.value && cityInp.value && countryInp.value && zipInp.value && cardTypeInp.value && cardNameInp.value && cardNumberInp.value && cardMonthInp.value && cardYearInp.value && cardCcvInp.value) {
+    ctaBtn.disabled = false;
+  } else {
+    ctaBtn.disabled = true;
+  }
 };
 
 nameInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(nameInp);
 });
 mailInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(mailInp);
 });
 addressInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(addressInp);
 });
 cityInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cityInp);
 });
 countryInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(countryInp);
 });
 zipInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  let zipNum = Number(zipInp.value);
+  validateCheckOutForm(zipNum, zipInp);
 });
 cardTypeInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardTypeInp);
 });
 cardNameInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardNameInp);
 });
 cardNumberInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardNumberInp);
 });
 cardMonthInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardMonthInp);
 });
 cardYearInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardYearInp);
 });
 cardCcvInp.addEventListener("blur", () => {
-  validateCheckOutForm();
+  validateCheckOutForm(cardCcvInp);
 });
-
-
-
-/*
-nameInp.onkeyup = () => {validateForm();};
-mailInp.onkeyup = () => {validateForm();};
-addressInp.onkeyup = () => {validateForm();};
-cityInp.onkeyup = () => {validateForm();};
-countryInp.onkeyup = () => {validateForm();};
-zipInp.onkeyup = () => {validateForm();};
-cardTypeInp.onkeyup = () => {validateForm();};
-cardNameInp.onkeyup = () => {validateForm();};
-cardNumberInp.onkeyup = () => {validateForm();};
-cardMonthInp.onkeyup = () => {validateForm();};
-cardYearInp.onkeyup = () => {validateForm();};
-cardCcvInp.onkeyup = () => {validateForm();};
-/*
-
-
-function checkForm(){
-  console.log("checking form");
-  console.log(nameInp.value, mailInp.value, addressInp.value, cityInp.value, countryInp.value, zipInp.value, cardTypeInp.value, cardNameInp.value, cardNumberInp.value, cardMonthInp.value, cardYearInp.value, cardCcvInp.value);
-  if (nameInp.value, mailInp.value, addressInp.value, cityInp.value, countryInp.value, zipInp.value, cardTypeInp.value, cardNameInp.value, cardNumberInp.value, cardMonthInp.value, cardYearInp.value, cardCcvInp.value) {
-    activateBtn();
-  }
-};
- */
-
-/*
-function checkInp(input){
-  input.addEventListener("blur",() => {
-    checkForm(nameInp, mailInp, addressInp, cityInp, countryInp, zipInp, cardTypeInp, cardNameInp, cardNumberInp, cardMonthInp, cardYearInp, cardCcvInp);
-});
-};
-
-
-
-checkInp(nameInp);
-checkInp(mailInp);
-checkInp(addressInp);
-checkInp(cityInp);
-checkInp(countryInp);
-checkInp(zipInp);
-checkInp(cardTypeInp);
-checkInp(cardNameInp);
-checkInp(cardNumberInp);
-checkInp(cardMonthInp);
-checkInp(cardYearInp);
-checkInp(cardCcvInp);
-*/

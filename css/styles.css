@@ -301,6 +301,14 @@ a > i{
     font-size: 0.8rem;
 }
 
+.valid{
+    border: 2px solid green;
+}
+
+.invalid{
+    border: 2px solid red;
+}
+
 /* MEDIA QUERIES AT THE BOTTOM */
 
 @media (min-width: 600px) {
