@@ -12,86 +12,88 @@ const cardMonthInp = document.querySelector("#expiry_month");
 const cardYearInp = document.querySelector("#exipiry_year");
 const cardCcvInp = document.querySelector("#ccv");
 
-function regExTest(thingToCheck, expression, container) {
-  if (typeof thingToCheck === "number") { // Here's a nut to crack. When the thing I check is a number, I don't check the input itself, but the converted value stored in "zipNum". Because of that, my function can't target the correct HTML item to add a class to 
-    const checkThis = thingToCheck;
-    const result = expression.test(checkThis);
-    if (result ===  true && result !== null) {
-      container.classList.remove("invalid");
-      container.classList.add("valid");
-      console.log(thingToCheck);
-      console.dir(container)
-    } else {
-      container.classList.remove("valid");
-      container.classList.add("invalid");
-    }
-  }
-  if (typeof thingToCheck === "string") {
-    const checkThis = thingToCheck.value.toLowerCase();
-    const result = expression.test(checkThis);
-    if (result === true) {
-      thingToCheck.classList.remove("invalid");
-      thingToCheck.classList.add("valid");
-    } else {
-      thingToCheck.classList.remove("valid");
-      thingToCheck.classList.add("invalid");
-    }
+function regExNum(thingToCheck, container, minNum, maxNum) {
+  if (thingToCheck >= minNum && thingToCheck < maxNum) {
+    container.classList.remove("invalid");
+    container.classList.add("valid");
+  } else {
+    container.classList.remove("valid");
+    container.classList.add("invalid");
   }
 };
 
-function validateCheckOutForm(input, container) {
-  if (typeof input === "number") {
-    let regEx = /^\d+$/;
-    regExTest(input, regEx, container);
-  }
-  if (input === mailInp) {
-    let regEx = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
-    regExTest(input, regEx);
+function validateCheckOutForm(input) {
+  if (input.value) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
   } else {
-    let regEx = /^[a-z æøå ,.'-]+$/;
-    regExTest(input, regEx);
+    input.classList.remove("valid");
+    input.classList.add("invalid");
   }
+};
+
+function checkInputs() {
   if (nameInp.value && mailInp.value && addressInp.value && cityInp.value && countryInp.value && zipInp.value && cardTypeInp.value && cardNameInp.value && cardNumberInp.value && cardMonthInp.value && cardYearInp.value && cardCcvInp.value) {
     ctaBtn.disabled = false;
   } else {
     ctaBtn.disabled = true;
   }
-};
+}
 
 nameInp.addEventListener("blur", () => {
   validateCheckOutForm(nameInp);
+  checkInputs();
 });
 mailInp.addEventListener("blur", () => {
   validateCheckOutForm(mailInp);
+  checkInputs();
 });
 addressInp.addEventListener("blur", () => {
   validateCheckOutForm(addressInp);
+  checkInputs();
 });
 cityInp.addEventListener("blur", () => {
   validateCheckOutForm(cityInp);
+  checkInputs();
 });
 countryInp.addEventListener("blur", () => {
   validateCheckOutForm(countryInp);
+  checkInputs();
 });
 zipInp.addEventListener("blur", () => {
   let zipNum = Number(zipInp.value);
-  validateCheckOutForm(zipNum, zipInp);
+  regExNum(zipNum, zipInp, 1, 10000);
+  checkInputs();
 });
 cardTypeInp.addEventListener("blur", () => {
   validateCheckOutForm(cardTypeInp);
+  checkInputs();
 });
 cardNameInp.addEventListener("blur", () => {
   validateCheckOutForm(cardNameInp);
+  checkInputs();
 });
 cardNumberInp.addEventListener("blur", () => {
   validateCheckOutForm(cardNumberInp);
+  checkInputs();
 });
 cardMonthInp.addEventListener("blur", () => {
   validateCheckOutForm(cardMonthInp);
+  checkInputs();
 });
 cardYearInp.addEventListener("blur", () => {
-  validateCheckOutForm(cardYearInp);
+  const cardYearNum = cardYearInp.value;
+  regExNum(cardYearNum, cardYearInp, 2023, 2030);
+  checkInputs();
 });
 cardCcvInp.addEventListener("blur", () => {
-  validateCheckOutForm(cardCcvInp);
+  const cardCcvNum = cardCcvInp.value;
+  regExNum(cardCcvNum, cardCcvInp, 1, 999);
+  checkInputs();
 });
+
+cardCcvInp.onkeyup = () => {
+  const cardCcvNum = cardCcvInp.value;
+  regExNum(cardCcvNum, cardCcvInp, 1, 999);
+  checkInputs();
+}
