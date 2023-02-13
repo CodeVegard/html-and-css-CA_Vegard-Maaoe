@@ -194,10 +194,11 @@ nav{
 .picwlink{
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
     padding-bottom: 10px;
-    min-height: 250px;
+    min-height: 350px;
+    min-width: 250px;
+    justify-content: space-between; 
 }
 
 .feat_prod_head{
@@ -205,6 +206,12 @@ nav{
     margin: 0px;
     padding: 0px;
     text-align: center;
+}
+
+.picwlink > p {
+    max-width: 180px;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
 }
 
 .feat_prod_txt{
