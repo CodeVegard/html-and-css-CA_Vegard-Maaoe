@@ -6,7 +6,6 @@ const unauthorizedUrl  = "https://sellmo.no/Flower_Power/wp-json/wc/v3/products?
 
 async function createProducts() {
     const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
-    console.log(fullUrl); //URL works
 
     const response = await fetch(fullUrl);
     const finishedResponse = await response.json();
@@ -15,10 +14,9 @@ async function createProducts() {
         const product = finishedResponse[i];
         
         if (product.stock_status === "instock" && product.tags[0].name === "men") {
-            console.log(product);
             mensItemsContainer.innerHTML += `
             <div class="picwlink">
-              <a href="product.html">
+              <a href="product.html?id=${product.id}">
                 <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
               </a>
               <h3 class="feat_prod_head">${product.name}</h3>
@@ -29,15 +27,14 @@ async function createProducts() {
         }
         
         if (product.stock_status === "instock" && product.tags[0].name === "women") {
-            console.log(product);
             womensItemsContainer.innerHTML += `
             <div class="picwlink">
-              <a href="product.html">
+              <a href="product.html?id=${product.id}">
                 <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
               </a>
               <h3 class="feat_prod_head">${product.name}</h3>
               ${product.short_description}
-              <a class="cta_btn" href="product.html">Buy Now!</a>
+              <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
             `;   
         } 

@@ -69,6 +69,11 @@ h1{
     margin: 10px;
 }
 
+.billing > p {
+    max-width: 300px;
+    text-align: center;
+}
+
 .order_summary > .billing{
     align-items: center;
 }

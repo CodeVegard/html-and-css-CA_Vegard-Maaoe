@@ -5,4 +5,44 @@ const productContainer = document.querySelector(".product_presentation");
 const queryString = document.location.search;
 const parameter = new URLSearchParams(queryString);
 const id = parameter.get("id");
-const productURL = `https://sellmo.no/Flower_Power/wp-json/wc/v3/products/0?id=${id}&consumer_key=${key}&consumer_secret${secret}`;
+const productURL = `https://sellmo.no/Flower_Power/wp-json/wc/v3/products/0?id=${id}&consumer_key=${key}&consumer_secret=${secret}`;
+
+console.log(productURL);
+
+async function createProductPage() {
+    const productResponse = await fetch(productURL);
+    const productInfo = await productResponse.json();
+    console.log(productInfo);
+
+    document.title = productInfo.name;
+    productContainer.innerHTML = `
+    <div class="product_imgs">
+        <img class="big_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        <div class="tiny_pics">
+        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
+        </div>
+      </div>
+
+      <section class="prod_text">
+        <h1 class="product_name">${productInfo.name}</h1>
+
+        <p class="product_description">
+        ${productInfo.description}
+        </p>
+
+        <p class="price">${productInfo.price} kr</p>
+
+        <form class="buybox" action="checkout.html" method="GET">
+          <input type="submit" class="buy" name="${productInfo.id}" value="Buy Now" />
+          <input type="submit" class="chart" name="${productInfo.id}" value="Add to Chart" />
+        </form>
+      </section>
+    </div>
+    `;
+}
+
+createProductPage();

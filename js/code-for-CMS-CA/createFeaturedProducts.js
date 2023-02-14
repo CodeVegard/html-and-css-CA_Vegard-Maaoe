@@ -17,12 +17,12 @@ async function createFeaturedProducts() {
         if (product.featured === true) {
             featuredItemsContainer.innerHTML += `
             <div class="picwlink">
-              <a href="product.html">
+              <a href="product.html?id=${product.id}">
                 <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
               </a>
               <h3 class="feat_prod_head">${product.name}</h3>
               ${product.short_description}
-              <a class="cta_btn" href="product.html">Buy Now!</a>
+              <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
             `;   
         }
