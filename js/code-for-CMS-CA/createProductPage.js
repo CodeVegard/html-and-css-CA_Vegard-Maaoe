@@ -12,7 +12,6 @@ console.log(productURL);
 async function createProductPage() {
     const productResponse = await fetch(productURL);
     const productInfo = await productResponse.json();
-    console.log(productInfo);
 
     document.title = productInfo.name;
     productContainer.innerHTML = `
