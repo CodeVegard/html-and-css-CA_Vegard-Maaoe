@@ -23,7 +23,7 @@ async function createProducts() {
               </a>
               <h3 class="feat_prod_head">${product.name}</h3>
               ${product.short_description}
-              <a class="cta_btn" href="product.html">Buy Now!</a>
+              <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
             `;   
         }
