@@ -5,7 +5,6 @@ const unauthorizedUrl  = "https://sellmo.no/Flower_Power/wp-json/wc/v3/products?
 
 async function createFeaturedProducts() {
     const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
-    console.log(fullUrl); //URL works
 
     const response = await fetch(fullUrl);
     const finishedResponse = await response.json();
