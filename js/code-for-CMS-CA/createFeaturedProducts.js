@@ -12,8 +12,6 @@ async function createFeaturedProducts() {
 
     for (let i = 0; i < finishedResponse.length; i++) {
         const product = finishedResponse[i];
-        console.log(product);
-
         if (product.featured === true) {
             featuredItemsContainer.innerHTML += `
             <div class="picwlink">
