@@ -183,8 +183,28 @@ nav{
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    flex-wrap: wrap;
 }
+
+.overflow{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    overflow: scroll;
+}
+
+
+.overflow::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .overflow::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.733);
+    border-radius: 10px;
+  }
+  .overflow::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
 .webshop_rowpic{
     max-height: 150px;
@@ -225,6 +245,7 @@ nav{
 .rd_mission{
     max-width: 650px;
     margin: auto;
+    margin-top: 50px;
     background-image: url(../images/gondolas_lower_res.jpg);
     min-height: 850px;
     background-position-y: 80%;
@@ -368,6 +389,9 @@ a > i{
         padding-top: 50px;
     } /* THIS WAS DONE TO KEEP THE TEXT JUST ABOVE THE NATURAL LINES  OF THE BG IMAGE OF rd_mission ON MORE SCREEN SIZES */
     .webshop_row{
+        max-width: 850px;
+    }
+    .overflow{
         max-width: 850px;
     }
 }
