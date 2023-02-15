@@ -17,13 +17,6 @@ async function createProductPage() {
     productContainer.innerHTML = `
     <div class="product_imgs">
         <img class="big_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        <div class="tiny_pics">
-        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        <img class="small_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
-        </div>
       </div>
 
       <section class="prod_text">
