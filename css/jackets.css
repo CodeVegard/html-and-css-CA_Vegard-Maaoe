@@ -97,6 +97,10 @@ h1, h2, h3{
     padding: 0px 10px;
 }
 
+.not-in-stock{
+    color: red;
+}
+
 .jackets_scrollbox{
     display: flex;
     flex-direction: row;
