@@ -13,6 +13,9 @@ async function createAllProducts() {
   const response = await fetch(fullUrl);
   const finishedResponse = await response.json();
 
+  mensItemsContainer.classList.remove("loader");
+  womensItemsContainer.classList.remove("loader");
+
   mensItemsContainer.innerHTML = "";
   womensItemsContainer.innerHTML = "";
 
