@@ -3,6 +3,7 @@ Here's what I want to do in my CMS CA:
 2. Improve the "Featured products" section, to display a scrollable DOM element when there are more than 3 items
 3. Either remove fake "Image Gallery" on product page or remove it - likely to remove, hard to create properly and not needed for the CA
 4. Create a search function based on tags and/or product names.
+5. Make a proper loading animation where relevant 
 
 Make sure product stock status is displed at all relevant points;
 -Front page
