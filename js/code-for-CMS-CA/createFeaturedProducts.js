@@ -15,7 +15,7 @@ async function createFeaturedProducts() {
 
     for (let i = 0; i < finishedResponse.length; i++) {
         const product = finishedResponse[i];
-        if (product.featured === true) {
+        if (product.featured === true && product.stock_status === "instock") {
           featuredProducts.push(product);
           console.log(featuredProducts);
             featuredItemsContainer.innerHTML += `

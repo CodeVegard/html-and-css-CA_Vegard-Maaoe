@@ -4,7 +4,7 @@ const key = "ck_ce76707e29bca6491c1a2264e1e99177076b8e77";
 const secret = "cs_95db7727bef7886304f909ba0852363c0d80bacd";
 const unauthorizedUrl = "https://sellmo.no/Flower_Power/wp-json/wc/v3/products?";
 
-const inStockMenBtn = document.querySelector("#in-stock-men")
+const inStockBtn = document.querySelector("#in-stock")
 
 
 async function createAllProducts() {
@@ -22,7 +22,7 @@ async function createAllProducts() {
   for (let i = 0; i < finishedResponse.length; i++) {
     const product = finishedResponse[i];
 
-    if (product.stock_status !== "instock" && product.tags[0].name === "men" && inStockMenBtn.checked === false) {
+    if (product.stock_status !== "instock" && product.tags[0].name === "men" && inStockBtn.checked === false) {
       mensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -35,7 +35,7 @@ async function createAllProducts() {
           </div>
           `;
     }
-    if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockMenBtn.checked === false) {
+    if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockBtn.checked === false) {
       mensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -47,7 +47,7 @@ async function createAllProducts() {
           </div>
           `;
     }
-    if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockMenBtn.checked === true) {
+    if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockBtn.checked === true) {
       mensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -61,7 +61,7 @@ async function createAllProducts() {
     }
 
 
-    if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockMenBtn.checked === false) {
+    if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockBtn.checked === false) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -73,7 +73,7 @@ async function createAllProducts() {
           </div>
           `;
     }
-    if (product.stock_status !== "instock" && product.tags[0].name === "women" && inStockMenBtn.checked === false) {
+    if (product.stock_status !== "instock" && product.tags[0].name === "women" && inStockBtn.checked === false) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -86,7 +86,7 @@ async function createAllProducts() {
           </div>
           `;
     }
-    if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockMenBtn.checked === true) {
+    if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockBtn.checked === true) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">
             <a href="product.html?id=${product.id}">
@@ -104,10 +104,10 @@ async function createAllProducts() {
 createAllProducts();
 
 function checkCheckbox() {
-  console.log(inStockMenBtn.checked);
+  console.log(inStockBtn.checked);
 };
 
 
 
-inStockMenBtn.addEventListener("change", (event) => checkCheckbox());
-inStockMenBtn.addEventListener("change", (event) => createAllProducts());
+inStockBtn.addEventListener("change", (event) => checkCheckbox());
+inStockBtn.addEventListener("change", (event) => createAllProducts());

@@ -1,5 +1,7 @@
 Here's what I want to do in my CMS CA:
 1. Give users the ability to select all items, or only items in stock (WORKS), on Sale, or both
+    - Works on jackets.html page, needs work on index, product page and the checkout page
+    - At the moment, products that are not in stock will not display on the Featured page
 2. Improve the "Featured products" section, to display a scrollable DOM element when there are more than 3 items
 3. Either remove fake "Image Gallery" on product page or remove it - likely to remove, hard to create properly and not needed for the CA
 4. Create a search function based on tags and/or product names.
@@ -9,3 +11,4 @@ Make sure product stock status is displed at all relevant points;
 -Front page
 -All products page (Works)
 -Single product page 
+-Checkout
