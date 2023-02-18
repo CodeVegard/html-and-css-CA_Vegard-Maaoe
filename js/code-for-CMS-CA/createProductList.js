@@ -101,13 +101,8 @@ async function createAllProducts() {
   }
 };
 
-createAllProducts();
+setTimeout(() => {
+  createAllProducts();
+}, 1000);
 
-function checkCheckbox() {
-  console.log(inStockBtn.checked);
-};
-
-
-
-inStockBtn.addEventListener("change", (event) => checkCheckbox());
 inStockBtn.addEventListener("change", (event) => createAllProducts());
