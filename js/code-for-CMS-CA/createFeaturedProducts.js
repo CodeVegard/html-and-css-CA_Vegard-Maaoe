@@ -13,6 +13,8 @@ async function createFeaturedProducts() {
 
     let featuredProducts = [];
 
+    featuredItemsContainer.classList.remove("loader");
+
     for (let i = 0; i < finishedResponse.length; i++) {
         const product = finishedResponse[i];
         if (product.featured === true && product.stock_status === "instock") {
@@ -27,14 +29,31 @@ async function createFeaturedProducts() {
               ${product.short_description}
               <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
-            `;   
+            `;
+        }
+            if (product.featured === true && product.stock_status !== "instock") {
+              featuredProducts.push(product);
+          console.log(featuredProducts);
+            featuredItemsContainer.innerHTML += `
+            <div class="picwlink">
+              <a href="product.html?id=${product.id}">
+                <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
+              </a>
+              <h3 class="feat_prod_head">${product.name}</h3>
+              ${product.short_description}
+              <p class="not-in-stock">Not in Stock</p>
+              <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
+            </div>
+            `;
+            }   
             if (featuredProducts.length > 3) {
               console.log("over 3 featured products");
               featureRow.classList.remove("webshop_row");
               featureRow.classList.add("overflow");
             }
         }
-    }
-};
+    };
 
-createFeaturedProducts();
+setTimeout(() => {
+  createFeaturedProducts();
+}, 1000);
