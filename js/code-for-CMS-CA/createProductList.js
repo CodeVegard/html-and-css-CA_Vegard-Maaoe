@@ -34,7 +34,7 @@ async function createAllProducts() {
             <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
           </div>
           `;
-    }
+    } else
     if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockBtn.checked === false) {
       mensItemsContainer.innerHTML += `
           <div class="picwlink">
@@ -46,7 +46,7 @@ async function createAllProducts() {
             <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
           </div>
           `;
-    }
+    } else
     if (product.stock_status === "instock" && product.tags[0].name === "men" && inStockBtn.checked === true) {
       mensItemsContainer.innerHTML += `
           <div class="picwlink">
@@ -58,9 +58,7 @@ async function createAllProducts() {
             <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
           </div>
           `;
-    }
-
-
+    } else
     if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockBtn.checked === false) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">
@@ -72,7 +70,7 @@ async function createAllProducts() {
             <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
           </div>
           `;
-    }
+    } else
     if (product.stock_status !== "instock" && product.tags[0].name === "women" && inStockBtn.checked === false) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">
@@ -85,7 +83,7 @@ async function createAllProducts() {
             <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
           </div>
           `;
-    }
+    } else
     if (product.stock_status === "instock" && product.tags[0].name === "women" && inStockBtn.checked === true) {
       womensItemsContainer.innerHTML += `
           <div class="picwlink">

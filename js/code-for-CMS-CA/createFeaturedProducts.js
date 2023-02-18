@@ -1,26 +1,26 @@
 const featuredItemsContainer = document.querySelector(".webshop_row");
 const key = "ck_ce76707e29bca6491c1a2264e1e99177076b8e77";
 const secret = "cs_95db7727bef7886304f909ba0852363c0d80bacd";
-const unauthorizedUrl  = "https://sellmo.no/Flower_Power/wp-json/wc/v3/products?";
+const unauthorizedUrl = "https://sellmo.no/Flower_Power/wp-json/wc/v3/products?";
 
 const featureRow = document.querySelector(".webshop_row");
 
 async function createFeaturedProducts() {
-    const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
+  const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
 
-    const response = await fetch(fullUrl);
-    const finishedResponse = await response.json();
+  const response = await fetch(fullUrl);
+  const finishedResponse = await response.json();
 
-    let featuredProducts = [];
+  let featuredProducts = [];
 
-    featuredItemsContainer.classList.remove("loader");
+  featuredItemsContainer.classList.remove("loader");
 
-    for (let i = 0; i < finishedResponse.length; i++) {
-        const product = finishedResponse[i];
-        if (product.featured === true && product.stock_status === "instock") {
-          featuredProducts.push(product);
-          console.log(featuredProducts);
-            featuredItemsContainer.innerHTML += `
+  for (let i = 0; i < finishedResponse.length; i++) {
+    const product = finishedResponse[i];
+    if (product.featured === true && product.stock_status === "instock") {
+      featuredProducts.push(product);
+      console.log(featuredProducts);
+      featuredItemsContainer.innerHTML += `
             <div class="picwlink">
               <a href="product.html?id=${product.id}">
                 <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
@@ -30,11 +30,11 @@ async function createFeaturedProducts() {
               <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
             `;
-        }
-            if (product.featured === true && product.stock_status !== "instock") {
-              featuredProducts.push(product);
-          console.log(featuredProducts);
-            featuredItemsContainer.innerHTML += `
+    } else
+    if (product.featured === true && product.stock_status !== "instock") {
+      featuredProducts.push(product);
+      console.log(featuredProducts);
+      featuredItemsContainer.innerHTML += `
             <div class="picwlink">
               <a href="product.html?id=${product.id}">
                 <img class="webshop_rowpic" src="${product.images[0].src}" alt="${product.images[0].alt}" title="${product.images[0].name}" />
@@ -45,14 +45,14 @@ async function createFeaturedProducts() {
               <a class="cta_btn" href="product.html?id=${product.id}">Buy Now!</a>
             </div>
             `;
-            }   
-            if (featuredProducts.length > 3) {
-              console.log("over 3 featured products");
-              featureRow.classList.remove("webshop_row");
-              featureRow.classList.add("overflow");
-            }
-        }
-    };
+    }
+    if (featuredProducts.length > 3) {
+      console.log("over 3 featured products");
+      featureRow.classList.remove("webshop_row");
+      featureRow.classList.add("overflow");
+    }
+  }
+};
 
 setTimeout(() => {
   createFeaturedProducts();
