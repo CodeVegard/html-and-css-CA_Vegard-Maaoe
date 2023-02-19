@@ -223,8 +223,7 @@ nav{
     width: 30px;
     height: 30px;
     animation: spin 1s linear infinite;
-    position: absolute;
-    left: 50%;
+    position: relative;
     transform: translateX(-50%);
 }
 
