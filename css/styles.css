@@ -183,6 +183,7 @@ nav{
     flex-direction: row;
     justify-content: center;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .not-in-stock{
