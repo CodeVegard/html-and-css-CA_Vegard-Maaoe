@@ -8,5 +8,5 @@ Here's what I want to do in my CMS CA:
 Make sure product stock status is displed at all relevant points;
 -Front page (Works)
 -All products page (Works)
--Single product page 
--Checkout
+-Single product page (Works)
+-Checkout (Works)

@@ -39,7 +39,6 @@ async function createProductPage() {
 
       <section class="prod_text">
         <h1 class="product_name">${productInfo.name}</h1>
-
         <p class="product_description">
         ${productInfo.description}
         </p>
