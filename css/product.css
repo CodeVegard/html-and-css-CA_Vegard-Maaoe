@@ -20,27 +20,6 @@
     max-width: 464px;
 }
 
-.tiny_pics{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    max-width: 464px;
-    width: 100%;
-    overflow-x: auto;
-}
-
-.tiny_pics::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-.tiny_pics::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.733);
-    border-radius: 10px;
-  }
-.tiny_pics::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
 .small_img{
     max-width: 130px;
     margin: 2px;
