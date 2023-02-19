@@ -13,6 +13,7 @@ h1, h2{
     background-image: url(../images/rocking_mountains_lowerres.jpg);
     max-width: none;
     background-position-x: 60%;
+    margin: 0;
 }
 
 .mission_box{

@@ -19,7 +19,6 @@ async function createFeaturedProducts() {
     const product = finishedResponse[i];
     if (product.featured === true && product.stock_status === "instock") {
       featuredProducts.push(product);
-      console.log(featuredProducts);
       featuredItemsContainer.innerHTML += `
             <div class="picwlink">
               <a href="product.html?id=${product.id}">
@@ -33,7 +32,6 @@ async function createFeaturedProducts() {
     } else
     if (product.featured === true && product.stock_status !== "instock") {
       featuredProducts.push(product);
-      console.log(featuredProducts);
       featuredItemsContainer.innerHTML += `
             <div class="picwlink">
               <a href="product.html?id=${product.id}">
