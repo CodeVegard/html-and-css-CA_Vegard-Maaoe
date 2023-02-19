@@ -10,3 +10,5 @@ Make sure product stock status is displed at all relevant points;
 -All products page (Works)
 -Single product page (Works)
 -Checkout (Works)
+
+ALL THAT'S LEFT is making a search / filter function. Will look into that next week.
