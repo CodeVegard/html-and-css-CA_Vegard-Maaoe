@@ -18,6 +18,11 @@ h1, h2, h3{
     text-align: center;
 }
 
+label{
+    font-family: var(--regular-fonts);
+    font-weight: 600;
+}
+
 .article_header{
     text-align: center;
 }
