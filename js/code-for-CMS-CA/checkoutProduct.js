@@ -14,7 +14,8 @@ async function createCheckoutProduct() {
     console.log(productInfo);
 
     document.title = productInfo.name;
-    if (productInfo.stock_status === "inStock") {
+    if (productInfo.stock_status === "instock") {
+      console.log("in stock");
         productContainer.innerHTML = `
           <h1>Order Summary:</h1>
           <img src="${productInfo.images[0].src}" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />
@@ -22,7 +23,9 @@ async function createCheckoutProduct() {
           ${productInfo.short_description}
           <p class="product_description">${productInfo.price} kr</p>
     `;
-    } else {
+    } else
+      if (productInfo.stock_status !== "instock"){
+      console.log("not in stock");
         productContainer.innerHTML = `
         <h1>Order Summary:</h1>
         <img src="${productInfo.images[0].src}" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />
