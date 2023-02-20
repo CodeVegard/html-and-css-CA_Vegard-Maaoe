@@ -86,13 +86,13 @@
     background-color: black;
 }
 
-input{
-    display: none;
-}
-
-.chart:hover{
+.cart:hover{
     color: black;
     background-color: var(--cta-bg-color);
+}
+
+input{
+    display: none;
 }
 
 /* The contrast on the buy buttons was awful, bordering on useless for colorblind people (green + orange). Went with black and white buttons with inspiration from nomaden.no */

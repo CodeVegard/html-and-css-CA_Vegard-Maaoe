@@ -102,17 +102,22 @@ label{
     padding: 0px 10px;
 }
 
+.filters-for-products{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filterbox{
+    margin: 10px auto;
+}
+
 .jackets_scrollbox{
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
-
-/*
-    The "webkit-scrollbar" effects were done with inspiration from https://css-tricks.com/css-only-carousel/
-    If I find the time, I might make a proper carousel with looping, but I'm happy with  this for now. 
-  */
 
 .jackets_scrollbox::-webkit-scrollbar {
   width: 5px;
@@ -142,4 +147,3 @@ label{
     height: 150px;
     width: 150px; 
 }
-

@@ -12,7 +12,6 @@ const productURL = `https://sellmo.no/Flower_Power/wp-json/wc/v3/products/0?id=$
 async function createCheckoutProduct() {
     const productResponse = await fetch(productURL);
     const productInfo = await productResponse.json();
-    console.log(productInfo);
 
     document.title = productInfo.name;
     if (productInfo.stock_status === "instock") {
@@ -26,7 +25,6 @@ async function createCheckoutProduct() {
     `;
     } else
       if (productInfo.stock_status !== "instock"){
-      console.log("not in stock");
         productContainer.innerHTML = `
         <h1>Order Summary:</h1>
         <img src="${productInfo.images[0].src}" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />

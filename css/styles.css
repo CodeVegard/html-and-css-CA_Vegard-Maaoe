@@ -188,8 +188,19 @@ nav{
 
 .not-in-stock{
     color: red;
+    font-size: 1rem;
     text-align: center;
     margin: auto;
+}
+
+.sale{
+    color: green;
+    text-align: center;
+    margin: auto;
+}
+
+.strikethrough{
+    text-decoration: line-through;
 }
 
 .overflow{
