@@ -23,8 +23,10 @@ async function createProductPage() {
         ${productInfo.description}
         <p class="price">${productInfo.price} kr</p>
         <form class="buybox" action="checkout.html" method="GET">
-          <input type="submit" class="buy" name="${productInfo.id}" value="Buy Now" />
-          <input type="submit" class="chart" name="${productInfo.id}" value="Add to Chart" />
+          <label for="buy-id" class="buy">Buy Now</label>
+          <input type="submit" id="buy-id" name="id" value="${productInfo.id}" />
+          <label for="cart-id" class="cart">Buy Now</label>
+          <input type="submit" id="cart-id" name="id" value="${productInfo.id}" />
         </form>
       </section>
     </div>
@@ -44,8 +46,10 @@ async function createProductPage() {
         <p class="price">${productInfo.price} kr</p>
 
         <form class="buybox" action="checkout.html" method="GET">
-          <input type="submit" class="buy" name="${productInfo.id}" value="Buy Now" />
-          <input type="submit" class="chart" name="${productInfo.id}" value="Add to Chart" />
+          <label for="buy-id" class="buy">Buy Now</label>
+          <input type="submit" id="buy-id" name="id" value="${productInfo.id}" />
+          <label for="cart-id" class="cart">Buy Now</label>
+          <input type="submit" id="cart-id" name="id" value="${productInfo.id}" />
         </form>
       </section>
     </div>
