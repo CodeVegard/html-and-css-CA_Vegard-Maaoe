@@ -10,7 +10,6 @@ function createHTML(container, arr) {
 
   for (let i = 0; i < arr.length; i++){
     const item = arr[i];
-    console.log(item);
   
     if (item.stock_status !== "instock") {
       container.innerHTML += `
@@ -37,7 +36,7 @@ function createHTML(container, arr) {
       `;
     }
   }
-}
+};
 
 async function createAllProducts() {
   const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
@@ -48,7 +47,7 @@ async function createAllProducts() {
   mensItemsContainer.classList.remove("loader");
   womensItemsContainer.classList.remove("loader");
 
-  let mensArr = finishedResponse.filter(arr => arr.tags[0].name === "men")
+  let mensArr = finishedResponse.filter(arr => arr.tags[0].name === "men");
   let womensArr = finishedResponse.filter(arr => arr.tags[0].name === "women");
 
   if (inStockBtn.checked === true) {

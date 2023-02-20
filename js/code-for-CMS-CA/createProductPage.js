@@ -7,8 +7,6 @@ const parameter = new URLSearchParams(queryString);
 const id = parameter.get("id");
 const productURL = `https://sellmo.no/Flower_Power/wp-json/wc/v3/products/0?id=${id}&consumer_key=${key}&consumer_secret=${secret}`;
 
-console.log(productURL);
-
 async function createProductPage() {
   const productResponse = await fetch(productURL);
   const productInfo = await productResponse.json();
@@ -53,7 +51,6 @@ async function createProductPage() {
     </div>
     `;
   }
-
 }
 
 createProductPage();

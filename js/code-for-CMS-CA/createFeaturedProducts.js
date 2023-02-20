@@ -45,7 +45,6 @@ async function createFeaturedProducts() {
             `;
     }
     if (featuredProducts.length > 3) {
-      console.log("over 3 featured products");
       featureRow.classList.remove("webshop_row");
       featureRow.classList.add("overflow");
     }
