@@ -2,7 +2,7 @@ const key = "ck_ce76707e29bca6491c1a2264e1e99177076b8e77";
 const secret = "cs_95db7727bef7886304f909ba0852363c0d80bacd";
 
 const checkoutBox = document.querySelector(".checkout");
-const productContainer = document.querySelector(".billing");
+const productContainer = document.querySelector(".summary");
 const queryString = document.location.search;
 const parameter = new URLSearchParams(queryString);
 const id = parameter.get("id");
@@ -15,7 +15,6 @@ async function createCheckoutProduct() {
 
     document.title = productInfo.name;
     if (productInfo.stock_status === "instock") {
-      console.log("in stock");
         productContainer.innerHTML = `
           <h1>Order Summary:</h1>
           <img src="${productInfo.images[0].src}" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />
@@ -23,17 +22,18 @@ async function createCheckoutProduct() {
           ${productInfo.short_description}
           <p class="product_description">${productInfo.price} kr</p>
     `;
-    } else
-      if (productInfo.stock_status !== "instock"){
+    } else if (productInfo.stock_status !== "instock"){
         productContainer.innerHTML = `
         <h1>Order Summary:</h1>
         <img src="${productInfo.images[0].src}" class="webshop_rowpic" alt="The Jacket" title="The Jacket" />
         <h2 class="product_name">${productInfo.name}</h2>
         ${productInfo.short_description}
         <p class="product_description">${productInfo.price} kr</p>
+        <p class="not-in-stock">Not in Stock. This item will ship as soon as possible, you will receive updates to your email when it is sent</p>
   `;  
-  checkoutBox.innerHTML +=`<p class="not-in-stock">Not in Stock. This item will ship as soon as possible, you will receive updates to your email when it is sent</p>`;
     }
 }
 
 createCheckoutProduct();
+
+
