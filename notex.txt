@@ -11,6 +11,9 @@ Make sure product stock status is displed at all relevant points;
 -Single product page (Works)
 -Checkout (Works)
 
-ALL THAT'S LEFT is making a search / filter function. Will look into that next week. 
 - The filter for jackets that are in stock works. 
+- The filter for jackets that are on sale works.
+
+ALL THAT'S LEFT
 - Considering making a sort by price button.
+- Make sure products on sale are displayed as such on products.html and checkout.html
