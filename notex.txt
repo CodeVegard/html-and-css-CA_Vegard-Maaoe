@@ -1,5 +1,5 @@
 Here's what I want to do in my CMS CA:
-1. Give users the ability to select all items, or only items in stock, on Sale, or both
+1. Give users the ability to select all items, or only items in stock, on Sale, or both - In stock works
 2. Improve the "Featured products" section, to display a scrollable DOM element when there are more than 3 items
 3. Either remove fake "Image Gallery" on product page or remove it - REMOVED
 4. Create a search function based on tags and/or product names.
