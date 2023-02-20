@@ -11,6 +11,8 @@ function createHTML(container, arr) {
   for (let i = 0; i < arr.length; i++){
     const item = arr[i];
   
+    container.classList.remove("loader")
+
     if (item.stock_status !== "instock") {
       container.innerHTML += `
       <div class="picwlink">
@@ -39,13 +41,15 @@ function createHTML(container, arr) {
 };
 
 async function createAllProducts() {
+  mensItemsContainer.innerHTML = "";
+  womensItemsContainer.innerHTML = "";
+
+  mensItemsContainer.classList.add("loader");
+
   const fullUrl = `${unauthorizedUrl}consumer_key=${key}&consumer_secret=${secret}`;
 
   const response = await fetch(fullUrl);
   const finishedResponse = await response.json();
-
-  mensItemsContainer.classList.remove("loader");
-  womensItemsContainer.classList.remove("loader");
 
   let mensArr = finishedResponse.filter(arr => arr.tags[0].name === "men");
   let womensArr = finishedResponse.filter(arr => arr.tags[0].name === "women");
@@ -55,15 +59,14 @@ async function createAllProducts() {
     womensArr = womensArr.filter(arr => arr.stock_status === "instock");
   };
 
-  mensItemsContainer.innerHTML = "";
-  womensItemsContainer.innerHTML = "";
-
-  createHTML(mensItemsContainer, mensArr);
-  createHTML(womensItemsContainer, womensArr);
+  setTimeout(() => {
+    createHTML(mensItemsContainer, mensArr);
+    createHTML(womensItemsContainer, womensArr);
+  }, 250);
 };
 
 setTimeout(() => {
   createAllProducts();
-}, 1000);
+}, 750);
 
 inStockBtn.addEventListener("change", (event) => createAllProducts());
