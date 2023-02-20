@@ -5,15 +5,18 @@ Here's what I want to do in my CMS CA:
 4. Create a search function based on tags and/or product names.
 5. Make a proper loading animation where relevant - DONE
 
-Make sure product stock status is displed at all relevant points;
--Front page (Works)
--All products page (Works)
--Single product page (Works)
--Checkout (Works)
-
-- The filter for jackets that are in stock works. 
-- The filter for jackets that are on sale works.
+WHAT WORKS
+- Front page 
+- All products page 
+- Single product page 
+- Checkout 
+- The filter for jackets that are in stock on jackets.html 
+- The filter for jackets that are on sale on jackets.html
 
 ALL THAT'S LEFT
 - Considering making a sort by price button.
 - Make sure products on sale are displayed as such on products.html and checkout.html
+- Fix CSS so that footer actually goes to the bottom on vertical desktop screens 
+- On checkout.html, make a shipping address option ~~~ Optional
+- Show prices on Featured products list 
+    - Make sure the on sale or out of stock text shows where relevant
