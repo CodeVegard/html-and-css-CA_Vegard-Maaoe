@@ -20,3 +20,4 @@ ALL THAT'S LEFT
 - Considering making a sort by price button.
 - Fix CSS so that footer actually goes to the bottom on vertical desktop screens 
 - On checkout.html, make a shipping address option ~~~ Optional
+- Make the footer into an export like the navigation
