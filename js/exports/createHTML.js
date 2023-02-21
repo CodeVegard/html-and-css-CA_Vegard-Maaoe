@@ -1,4 +1,4 @@
-export function createHTML(attribute, container, arr) {
+export function createHTML(container, arr) {
     if (arr.length === 0) {
         container.classList.remove("loader");
         container.innerHTML += '<p>No items to display</p>';
