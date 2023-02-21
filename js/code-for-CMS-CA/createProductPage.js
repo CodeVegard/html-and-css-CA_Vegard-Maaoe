@@ -34,12 +34,11 @@ async function createProductPage() {
     </div>
     `;
   } else
-  if (productInfo.on_sale = true) {
+  if (productInfo.on_sale === true) {
     productContainer.innerHTML = `
     <div class="product_imgs">
         <img class="big_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
       </div>
-
       <section class="prod_text">
         <h1 class="product_name">${productInfo.name}</h1>
         ${productInfo.description}
@@ -65,7 +64,6 @@ async function createProductPage() {
         ${productInfo.description}
         <p class="not-in-stock">Not in Stock</p>
         <p class="price">${productInfo.price} kr</p>
-
         <form class="buybox" action="checkout.html" method="GET">
           <label for="buy-id" class="buy">Buy Now</label>
           <input type="submit" id="buy-id" name="id" value="${productInfo.id}" />
@@ -80,7 +78,6 @@ async function createProductPage() {
     <div class="product_imgs">
         <img class="big_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
       </div>
-
       <section class="prod_text">
         <h1 class="product_name">${productInfo.name}</h1>
         ${productInfo.description}
