@@ -12,7 +12,7 @@ async function createProductPage() {
   const productInfo = await productResponse.json();
 
   document.title = productInfo.name;
-  if (productInfo.on_sale = true && productInfo.stock_status !== "instock") {
+  if (productInfo.on_sale === true && productInfo.stock_status !== "instock") {
     productContainer.innerHTML = `
     <div class="product_imgs">
         <img class="big_img" src="${productInfo.images[0].src}" alt="${productInfo.images[0].alt}" title="${productInfo.images[0].name}" />
