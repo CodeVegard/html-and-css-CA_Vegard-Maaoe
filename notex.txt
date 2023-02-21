@@ -12,11 +12,11 @@ WHAT WORKS
 - Checkout 
 - The filter for jackets that are in stock on jackets.html 
 - The filter for jackets that are on sale on jackets.html
+- Show prices on Featured products list 
+    - Make sure the on sale or out of stock text shows where relevant
+- Make sure products on sale are displayed as such on products.html and checkout.html
 
 ALL THAT'S LEFT
 - Considering making a sort by price button.
-- Make sure products on sale are displayed as such on products.html and checkout.html
 - Fix CSS so that footer actually goes to the bottom on vertical desktop screens 
 - On checkout.html, make a shipping address option ~~~ Optional
-- Show prices on Featured products list 
-    - Make sure the on sale or out of stock text shows where relevant
