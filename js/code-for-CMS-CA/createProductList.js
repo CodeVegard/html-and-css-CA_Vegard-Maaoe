@@ -31,7 +31,6 @@ async function createAllProducts() {
   if (onSaleBtn.checked === true) {
     mensArr = mensArr.filter(arr => arr.on_sale === true);
     womensArr = womensArr.filter(arr => arr.on_sale === true);
-    console.log(womensArr);
   };
 
   createHTML(mensItemsContainer, mensArr);

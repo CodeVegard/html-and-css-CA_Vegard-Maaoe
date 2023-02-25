@@ -14,7 +14,6 @@ async function createFeaturedProducts() {
   const finishedResponse = await response.json();
 
   let featuredProducts = finishedResponse.filter(arr => arr.featured=== true);
-  console.log(featuredProducts);
 
   featuredItemsContainer.classList.remove("loader");
 
