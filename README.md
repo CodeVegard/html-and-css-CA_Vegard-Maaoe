@@ -17,6 +17,8 @@ The content is managed with WooCommerce via headless WP as the CMS, and I use Ja
 Skills I have picked up while working on the project:
 - Understanding of the WCAG standard
   - Semantic HTML
+  - Design for the web
+  - Proper use of 
 - List item 3
 
 ## Built With
