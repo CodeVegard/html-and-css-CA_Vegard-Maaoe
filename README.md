@@ -15,9 +15,20 @@ as well as undestanding the WordPress REST API.
 The content is managed with WooCommerce via headless WP as the CMS, and I use JavaScript to dynamically populate the site.
 
 Skills I have picked up while working on the project:
-- Understanding of the WCAG standard
+- Design
+    - Font legibillity
+    - Mobile first design
+    - Understanding of UI/UX and interaction design
+    - WCAG in design
+        - Dyslexia, color-blindness, etc.
+- HTML
     - Semantic HTML
-    - Design for the web
+    - Proper forms, inputs and labels
+
+- CSS
+    - Media Queries 
+    - Neat CSS that should not repeat itself
+    - Parallax effects
 - JavaScript 
     - Export functions to other scripts in order to have clear file structures
     - Form validation
@@ -27,10 +38,11 @@ Skills I have picked up while working on the project:
 
 ## Built With
 
-You can list a the tech stack that you've used over here
-
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
+All are Vanilla
+- HTML5
+- CSS
+- JavaScript 
+- WordPress REST API (headless)
 
 ## Getting Started
 
