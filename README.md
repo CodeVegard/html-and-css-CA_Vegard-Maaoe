@@ -16,10 +16,14 @@ The content is managed with WooCommerce via headless WP as the CMS, and I use Ja
 
 Skills I have picked up while working on the project:
 - Understanding of the WCAG standard
-  - Semantic HTML
-  - Design for the web
-  - Proper use of 
-- List item 3
+    - Semantic HTML
+    - Design for the web
+- JavaScript 
+    - Export functions to other scripts in order to have clear file structures
+    - Form validation
+    - Filtering products based on simple criteria (in stock and/or on sale)
+- WordPress
+    - 
 
 ## Built With
 
