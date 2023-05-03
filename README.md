@@ -14,6 +14,15 @@ as well as undestanding the WordPress REST API.
 
 The content is managed with WooCommerce via headless WP as the CMS, and I use JavaScript to dynamically populate the site.
 
+## Built With
+
+- HTML5
+- CSS
+- JavaScript 
+- WordPress REST API (headless)
+
+## Skills I have learned
+
 Skills I have picked up while working on the project:
 - Design
     - Font legibillity
@@ -34,14 +43,9 @@ Skills I have picked up while working on the project:
     - Form validation
     - Filtering products based on simple criteria (in stock and/or on sale)
 - WordPress
-    - 
-
-## Built With
-
-- HTML5
-- CSS
-- JavaScript 
-- WordPress REST API (headless)
+    - Headless Mode
+    - Quick intro to PHP
+    - WooCommerce
 
 ## Contributing
 
