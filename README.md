@@ -30,11 +30,11 @@ Skills I have picked up while working on the project:
 - HTML
     - Semantic HTML
     - Proper forms, inputs and labels
-
 - CSS
     - Media Queries 
     - Neat CSS that should not repeat itself
     - Parallax effects
+    - CSS "hack" to display menu bar when checkbox is checked
 - JavaScript 
     - Export functions to other scripts in order to have clear file structures
     - Form validation
