@@ -21,6 +21,7 @@ The content is managed with WooCommerce via headless WP as the CMS, and I use Ja
 
 Skills I have picked up while working on the project:
 - Design
+    - Adobe XD proficiency 
     - Font legibillity
     - Mobile first design
     - Understanding of UI/UX and interaction design
@@ -42,6 +43,9 @@ Skills I have picked up while working on the project:
     - Headless Mode
     - Quick intro to PHP
     - WooCommerce
+- Other 
+    - Time management skills 
+    - Project management skills
 
 ## Contributing
 
