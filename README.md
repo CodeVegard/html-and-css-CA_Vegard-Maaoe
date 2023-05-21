@@ -17,6 +17,11 @@ The content is managed with WooCommerce via headless WP as the CMS, and I use Ja
 - JavaScript 
 - WordPress REST API (headless)
 
+## Installation
+
+No installation needed, I have only been using vanilla variants of HTML, CSS and JS. Clone the repo, open it in VSCode and run it via Live Server to have a look around. Alternatively, go to the live site:
+https://ecstatic-jackson-e63b3f.netlify.app/ 
+
 ## Skills I have learned
 
 Skills I have picked up while working on the project:
