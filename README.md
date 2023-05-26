@@ -1,5 +1,7 @@
 # Cross-Course Assignment
 
+![image](https://github.com/VegardMaao/Portfolio-management-1/blob/main/images/cross-course.jpg?raw=true)
+
 ## Description
 
 This project was made as part of several assignments for my Front-End Developer
