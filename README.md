@@ -23,6 +23,9 @@ No installation needed, I have only been using vanilla variants of HTML, CSS and
 
 https://ecstatic-jackson-e63b3f.netlify.app/ 
 
+You can find the API here:
+https://sellmo.no/Flower_Power/wp-json
+
 ## Skills I have learned
 
 Skills I have picked up while working on the project:
