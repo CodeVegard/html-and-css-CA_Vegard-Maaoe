@@ -312,7 +312,8 @@ nav{
     margin: 10px auto;
     color: #FFFFFF;
     font-size: 1.4rem;
-    text-align: center
+    text-align: center;
+    /* line-height: 2rem; */
 }
 
 /* THIS IS FOR THE FOOTER */
